@@ -10,9 +10,14 @@ document.addEventListener("DOMContentLoaded", function() {
     const emojis = document.querySelectorAll('#emoji-feedback .emoji');
     const stars = document.querySelectorAll('#star-rating i');
     const breathingCircle = document.getElementById('breathing-circle');
-
+    const timerDisplay = document.getElementById('timer-display');
+    const startTimerBtn = document.getElementById('start-timer');
+    const resetTimerBtn = document.getElementById('reset-timer');
+    const downloadBtn = document.getElementById('download');
+    const fileFormat = document.getElementById('file-format');
     let currentExercise = '4-7-8';
     let timeline;
+    let timerInterval;
 
     const exercises = {
         '4-7-8': {
@@ -37,6 +42,9 @@ document.addEventListener("DOMContentLoaded", function() {
         'simple-body': {
             instructions: 'Stand up, stretch your arms above your head for 5 seconds, and then slowly bend to touch your toes.',
             animation: () => {
+                if (timeline) {
+                    timeline.kill();
+                }
                 timeline = gsap.timeline({repeat: -1});
                 timeline.to(exerciseText, {text: "Stretch Up", duration: 5, ease: "power1.inOut"})
                         .to(exerciseText, {text: "Bend Down", duration: 5, ease: "power1.inOut"});
@@ -67,6 +75,7 @@ document.addEventListener("DOMContentLoaded", function() {
         }
         feedbackContainer.style.display = 'none';
         exerciseInstructions.innerText = exercises[exercise].instructions;
+        breathingCircle.classList.remove('hidden');
         exercises[exercise].animation();
     };
 
@@ -109,6 +118,41 @@ document.addEventListener("DOMContentLoaded", function() {
                 changeExerciseBtn.click();
             }
         });
+    });
+
+    // Mindfulness Timer
+    const startTimer = (duration) => {
+        let timer = duration * 60, minutes, seconds;
+        timerInterval = setInterval(() => {
+            minutes = parseInt(timer / 60, 10);
+            seconds = parseInt(timer % 60, 10);
+
+            minutes = minutes < 10 ? "0" + minutes : minutes;
+            seconds = seconds < 10 ? "0" + seconds : seconds;
+
+            timerDisplay.textContent = minutes + ":" + seconds;
+
+            if (--timer < 0) {
+                clearInterval(timerInterval);
+                timerDisplay.textContent = "00:00";
+                alert("Time's up! Take a moment to reflect on your mindfulness practice.");
+            }
+        }, 1000);
+    };
+
+    startTimerBtn.addEventListener('click', () => {
+        const duration = parseInt(document.getElementById('timer-duration').value);
+        if (!isNaN(duration) && duration > 0) {
+            clearInterval(timerInterval);
+            startTimer(duration);
+        } else {
+            alert("Please enter a valid duration in minutes.");
+        }
+    });
+
+    resetTimerBtn.addEventListener('click', () => {
+        clearInterval(timerInterval);
+        timerDisplay.textContent = "00:00";
     });
 
     // Drawing board functionality
@@ -178,6 +222,23 @@ document.addEventListener("DOMContentLoaded", function() {
 
     document.getElementById('clear-board').addEventListener('click', () => {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
+    });
+
+    downloadBtn.addEventListener('click', () => {
+        const format = fileFormat.value;
+        const link = document.createElement('a');
+        
+        if (format === 'png' || format === 'jpg') {
+            link.href = canvas.toDataURL(`image/${format}`);
+            link.download = `drawing.${format}`;
+        } else if (format === 'pdf') {
+            const pdf = new jsPDF();
+            pdf.addImage(canvas.toDataURL('image/png'), 'PNG', 0, 0, pdf.internal.pageSize.getWidth(), pdf.internal.pageSize.getHeight());
+            link.href = pdf.output('bloburl');
+            link.download = 'drawing.pdf';
+        }
+        
+        link.click();
     });
 
     // Touch support for mobile devices
