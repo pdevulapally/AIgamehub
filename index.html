@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Game Hub - Tic-Tac-Toe</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+</head>
+<body>
+    <header>
+        <h1>AI Game Hub</h1>
+        <nav>
+            <ul>
+                <li><a href="Home.html">Tic-Tac-Toe</a></li>
+                <li><a href="glyphhunt.html">Glyphhunt</a></li>
+                <li><a href="BreakingBad.html">Breaking Bad</a></li>
+                <li><a href="Feedback.html">Feedback</a></li>
+            </ul>
+        </nav>
+    </header>
+    <span id="accessibility-icon" class="material-symbols-outlined">accessibility</span>
+    <div id="accessibility-menu">
+        <button id="increase-text-size">Increase Text Size</button>
+        <button id="decrease-text-size">Decrease Text Size</button>
+        <button id="color-blind-mode">Color Blind Mode</button>
+    </div>
+    <main>
+        <section id="tic-tac-toe">
+            <h2>Tic-Tac-Toe</h2>
+            <div class="score-board">
+                <div>Wins: <span id="wins">0</span></div>
+                <div>Losses: <span id="losses">0</span></div>
+                <div>Draws: <span id="draws">0</span></div>
+            </div>
+            <div id="difficulty-levels">
+                <button data-level="easy">Easy</button>
+                <button data-level="medium">Medium</button>
+                <button data-level="hard">Hard</button>
+            </div>
+            <div id="tic-tac-toe-board" class="board">
+                <div class="cell" data-index="0"></div>
+                <div class="cell" data-index="1"></div>
+                <div class="cell" data-index="2"></div>
+                <div class="cell" data-index="3"></div>
+                <div class="cell" data-index="4"></div>
+                <div class="cell" data-index="5"></div>
+                <div class="cell" data-index="6"></div>
+                <div class="cell" data-index="7"></div>
+                <div class="cell" data-index="8"></div>
+            </div>
+        </section>
+        <div id="choose-symbol" class="modal">
+            <div class="modal-content">
+                <h2>Choose Your Symbol</h2>
+                <button data-symbol="X">X</button>
+                <button data-symbol="O">O</button>
+            </div>
+        </div>
+    </main>
+    <footer>Website created by Preetham Devulapally</footer>
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const accessibilityIcon = document.getElementById('accessibility-icon');
+            const accessibilityMenu = document.getElementById('accessibility-menu');
+            const increaseTextSizeBtn = document.getElementById('increase-text-size');
+            const decreaseTextSizeBtn = document.getElementById('decrease-text-size');
+            const colorBlindModeBtn = document.getElementById('color-blind-mode');
+            let textSize = 16;
+            let colorBlindMode = false;
+
+            accessibilityIcon.addEventListener('click', () => {
+                accessibilityMenu.style.display = accessibilityMenu.style.display === 'block' ? 'none' : 'block';
+            });
+
+            increaseTextSizeBtn.addEventListener('click', () => {
+                textSize += 2;
+                document.body.style.fontSize = textSize + 'px';
+            });
+
+            decreaseTextSizeBtn.addEventListener('click', () => {
+                textSize = textSize > 10 ? textSize - 2 : textSize;
+                document.body.style.fontSize = textSize + 'px';
+            });
+
+            colorBlindModeBtn.addEventListener('click', () => {
+                colorBlindMode = !colorBlindMode;
+                document.documentElement.classList.toggle('color-blind-mode', colorBlindMode);
+            });
+        });
+    </script>
+</body>
+</html>
