@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Embedded Game</title>
+    <link rel="stylesheet" href="vcop2.css">
+</head>
+<body>
+    <div id="game-container">
+        <canvas id="dosbox-canvas"></canvas>
+    </div>
+    <script src="em-dosbox.js"></script>
+    <script>
+        // Initialize DOSBox
+        var dosbox = new Dosbox({
+            id: "dosbox-canvas",
+            onload: function (dosbox) {
+                dosbox.run('game/PPJ2DD.EXE');  // Replace with the actual game executable
+            },
+            onrun: function () {
+                console.log("DOSBox is running the game.");
+            }
+        });
+
+        // Start DOSBox
+        dosbox.start({
+            cycles: 3000,
+            autolock: true,
+            mouse: true,
+            loadfiles: [
+                'game/PPJ2DD.EXE',
+                'game/VirtuaCop2',
+                // List all necessary game files here
+            ],
+            filesystem: 'emscripten',
+            dosbox.conf: 'dosbox.conf'
+        });
+    </script>
+</body>
+</html>
