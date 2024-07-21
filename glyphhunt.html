@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maze Game</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    <header>
+        <h1>Maze Game</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Tic-Tac-Toe</a></li>
+                <li><a href="glyphhunt.html">Glyphhunt</a></li>
+                <li><a href="BreakingBad.html">Breaking Bad</a></li>
+                <li><a href="Feedback.html">Feedback</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div id="difficulty-levels" class="controls">
+        <button id="easy">Easy</button>
+        <button id="medium">Medium</button>
+        <button id="hard">Hard</button>
+    </div>
+    <div id="score-board" class="score-board">
+        Glyphs Collected: <span id="glyphs">0</span>  Moves: <span id="moves">0</span>
+    </div>
+    <div id="maze" class="maze"></div>
+    <button id="instructions-button">Instructions</button>
+    <div id="instructions-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Instructions</h2>
+            <p><strong>Computer Instructions:</strong> Use arrow keys or W, A, S, D keys to move the player. Collect stars (⭐) while avoiding bombs (💣). Reach the end to win!</p>
+            <p><strong>Mobile/Tablet Instructions:</strong> Tap on the blocks to move the player. Collect stars (⭐) while avoiding bombs (💣). Reach the end to win!</p>
+        </div>
+    </div>
+    <script src="glyphhunt.js"></script>
+     <script>
+     // Existing JavaScript
+
+document.addEventListener('DOMContentLoaded', () => {
+    // Existing JavaScript
+
+    const instructionsModal = document.getElementById('instructions-modal');
+    const instructionsButton = document.getElementById('instructions-button');
+    const closeButton = document.querySelector('.close');
+
+    instructionsButton.addEventListener('click', () => {
+        instructionsModal.style.display = 'block';
+    });
+
+    closeButton.addEventListener('click', () => {
+        instructionsModal.style.display = 'none';
+    });
+
+    window.addEventListener('click', (event) => {
+        if (event.target === instructionsModal) {
+            instructionsModal.style.display = 'none';
+        }
+    });
+
+    // Show instructions modal initially
+    instructionsModal.style.display = 'block';
+
+    // Existing JavaScript
+});
+
+
+     
+     </script>
+</body>
+</html>
