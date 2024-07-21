@@ -1,1 +1,1 @@
-# mindfullnesshaven
+# westminsterHinduSociety
