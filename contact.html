@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- This website is created by Preetham Devulapally for Hindu society. All rights reserved © -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UoW Hindu Society</title>
+    <link rel="icon" href="Images/favicon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="contact.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="Home.html"><img src="Images/Hindusoclogo.png" alt="UoW Hindu Society Logo" class="logo"></a>
+            <h1>UoW Hindu Society</h1>
+            <div class="burger-menu" id="burgerMenu">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <nav>
+                <ul id="navList">
+                    <li><a href="index.html">About Us</a></li>
+                    <li><a href="nhsfaffiliate.html">About NHSF</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="resources.html">Resources</a></li>
+                    <li><a href="contact.html" class="active">Contact Us</a></li>
+                </ul>
+            </nav>
+            <div class="accessibility">
+                <button id="accessibilityToggle" title="Accessibility Options" class="material-symbols-outlined">accessibility</button>
+                <div class="accessibility-menu" id="accessibilityMenu">
+                    <button id="increaseFont" title="Increase Font Size">A+</button>
+                    <button id="decreaseFont" title="Decrease Font Size">A-</button>
+                    <button id="highContrast" title="High Contrast Mode">High Contrast</button>
+                    <button id="normalView" title="Normal View">Normal View</button>
+                    <button id="colorBlind" title="Color Blind Mode">Color Blind Mode</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="hero">
+            <div class="container">
+                <h2>Get in Touch</h2>
+                <p>We would love to hear from you! Whether you have a question about our events, resources, or anything else, our team is ready to answer all your questions.</p>
+            </div>
+        </section>
+        <section id="contact-info">
+            <div class="container contact-content">
+                <div class="contact-details">
+                    <h2>Contact Us</h2>
+                    <p> Have any questions or want to get involved? Reach out to us on the contact form or through our socials @uow_hindusoc </p>
+                    <div class="info-box">
+                        <span class="material-symbols-outlined">location_on</span>
+                        <p><a href="https://www.google.com/maps/place/University+of+Westminster+Students'+Union/@51.5223523,-0.1549735,17z/data=!3m2!4b1!5s0x48761ace5abce5af:0x7cdb25ae6e41f478!4m6!3m5!1s0x48761b2a542e6f5f:0xec3513747f3569bb!8m2!3d51.5223523!4d-0.1549735!16s%2Fg%2F11f1051xfj?entry=ttu">University of Westminster Students' Union <br> 35 Marylebone Rd, London NW1 5LS</a></p>
+                    </div>
+                    <div class="info-box">
+                        <span class="material-symbols-outlined">call</span>
+                        <p>+44 20 7911 5000  (Student union office ) </p>
+                    </div>
+                    <div class="info-box">
+                        <span class="material-symbols-outlined">mail</span>
+                        <p><a href="mailto:hindu.soc@su.westminster.ac.uk">hindu.soc@su.westminster.ac.uk</a></p>
+                    </div>
+                    <div class="social-media">
+                        <h3>Follow Us</h3>
+                        <a href="https://www.instagram.com/uow_hindusoc/"><img src="Images/instagram.png" alt="@uow_hindusoc instagram" class="social-icon"></a>
+                        <a href="https://www.tiktok.com/@uow_hindusoc?lang=en"><img src="Images/tik-tok.png" alt="@uow_hindusoc tiktok" class="social-icon"></a>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <h2>Contact Form</h2>
+                    <form id="contact-form" onsubmit="sendMail(event)">
+                        <div class="form-group">
+                            <label for="name">Name:</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject:</label>
+                            <input type="text" id="subject" name="subject" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message:</label>
+                            <textarea id="message" name="message" rows="4" required></textarea>
+                        </div>
+                        <button type="submit">Send</button>
+                    </form>
+                    <div id="thank-you-message" class="thank-you-message">
+                        <h2>Thank you!</h2>
+                        <p>We will respond to you soon.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+        <!-- This website is created by Preetham Devulapally for Hindu society. All rights reserved © -->
+            <p>&copy; 2024 UoW Hindu Society. All rights reserved.</p>
+            <p>@uow_hindusoc</p>
+        </div>
+    </footer>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function(){
+            emailjs.init("LD4qYLh8XEkB81D1f"); 
+        })();
+    </script>
+    <script>
+        function sendMail(event) {
+            event.preventDefault();
+
+            let params = {
+                name: document.getElementById("name").value,
+                email: document.getElementById("email").value,
+                subject: document.getElementById("subject").value,
+                message: document.getElementById("message").value,
+            };
+
+            emailjs.send("service_2uucxze", "template_d2hs0b6", params) 
+                .then(function(response) {
+                    console.log('SUCCESS!', response.status, response.text);
+                    document.getElementById("contact-form").reset();
+                    showThankYouMessage();
+                }, function(error) {
+                    console.error('FAILED...', error);
+                    alert('Failed to send message. Please try again later.');
+                });
+        }
+
+        function showThankYouMessage() {
+            const form = document.getElementById("contact-form");
+            const thankYouMessage = document.getElementById("thank-you-message");
+            form.style.display = "none";
+            thankYouMessage.style.display = "block";
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            // Toggle burger menu
+            const burgerMenu = document.getElementById('burgerMenu');
+            const navList = document.getElementById('navList');
+
+            burgerMenu.addEventListener('click', () => {
+                navList.classList.toggle('show');
+                burgerMenu.classList.toggle('active');
+            });
+
+            // Accessibility toggle
+            const accessibilityToggle = document.getElementById('accessibilityToggle');
+            const accessibilityMenu = document.getElementById('accessibilityMenu');
+
+            accessibilityToggle.addEventListener('click', () => {
+                accessibilityMenu.classList.toggle('show');
+            });
+
+            // Accessibility options
+            document.getElementById('increaseFont').addEventListener('click', () => {
+                document.body.style.fontSize = '18px';
+            });
+
+            document.getElementById('decreaseFont').addEventListener('click', () => {
+                document.body.style.fontSize = '14px';
+            });
+
+            document.getElementById('highContrast').addEventListener('click', () => {
+                document.body.classList.add('high-contrast');
+            });
+
+            document.getElementById('normalView').addEventListener('click', () => {
+                document.body.classList.remove('high-contrast');
+                document.body.classList.remove('color-blind-mode');
+            });
+
+            document.getElementById('colorBlind').addEventListener('click', () => {
+                document.body.classList.add('color-blind-mode');
+            });
+        });
+    </script>
+</body>
+</html>

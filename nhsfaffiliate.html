@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- This website is created by Preetham Devulapally for Hindu society. All rights reserved © -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UoW Hindu Society & NHSF Collaboration</title>
+    <link rel="stylesheet" href="affiliate.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+</head>
+<body>
+    <header>
+        <a href="Home.html"><img src="Images/Hindusoclogo.png" alt="UoW Hindu Society Logo" class="logo"></a>
+        <h1>UoW Hindu Society</h1>
+        <nav>
+            <div class="burger-menu" id="burger-menu">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <ul id="nav-menu">
+                <li><a href="index.html">About Us</a></li>
+                <li><a href="nhsfaffiliate.html">About NHSF</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="resources.html">Resources</a></li>
+                <li><a href="contact.html" class="active">Contact Us</a></li>
+            </ul>
+        </nav>
+        <button class="accessibility-button" onclick="toggleAccessibilityMenu()">
+            <span class="material-symbols-outlined">accessibility</span> 
+        </button>
+        <div class="accessibility-menu" id="accessibility-menu">
+            <button onclick="increaseFontSize()">A+</button>
+            <button onclick="decreaseFontSize()">A-</button>
+            <button onclick="toggleHighContrast()">High Contrast</button>
+            <button onclick="resetView()">Normal View</button>
+            <button onclick="toggleColorBlindMode()">Color Blind Mode</button>
+        </div>
+    </header>
+
+    <main>
+        <section id="about" class="about">
+            <div class="container">
+                <h2>About NHSF</h2>
+                <p>The National Hindu Students' Forum (NHSF) is the largest Hindu student body in the UK, dedicated to promoting Hindu Dharma and supporting students in their spiritual and academic journeys. Established in 1991, NHSF aims to create a platform for Hindu students to connect, share, and grow through various cultural, educational, and community activities.</p>
+                <p>NHSF works to preserve, protect, and promote Hindu traditions, values, and principles among students. Through a range of events, workshops, and initiatives, NHSF fosters a sense of belonging and provides opportunities for personal and spiritual growth. By affiliating with various university Hindu societies, NHSF creates a strong network of students who can collaborate, share resources, and celebrate their heritage together.</p>
+                <a href="https://www.nhsf.org.uk/about-us-3/"><img src="Images/NHSF.png" alt="NHSF Logo" class="nhsf-logo"></a>
+            </div>
+        </section>
+
+        <section id="events" class="events">
+    <div class="container">
+        <h2>Upcoming Events</h2>
+        <div class="event">
+            <h3>President's Day</h3>
+            <img id="event-img-1" src="Images/presidentsday.jpg" alt="President's Day Event" class="event-img">
+            <p>Namaste 🙏🏼 <br>
+            Hope you are all well and having a great summer. <br>
+            It's the event you’ve all been waiting for NHSF (UK) Presidents' Day 2024 <br><br>
+            💥 SAVE THE DATE - Sunday 18th August 2024 💥 <br><br>
+            📍 Ghanshyam Education Centre, Westfield Ln, London HA3 9EA <br><br>
+            This is an opportunity for you, our future Hindu leaders, to embark on your journey by learning new skills, meeting Presidents from other universities as well as having fun. <br><br>
+            More details to come soon, keep a look out 👀
+            </p>
+            <p id="timer-1" class="timer"></p>
+        </div>
+    </div>
+    </section>
+     <div class="event">
+         <h3>Coming soon...⌛</h3>
+     
+        <p>We will update this section as soon as we get the event information. <br> Thank you for your patience</p>
+        </div>
+        </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <div class="container">
+                <h2>Contact Us</h2>
+                <p class="question">Have any questions or want to get involved? Reach out to us on the below socials:</p>
+                <div class="social-media">
+                    <div class="social-media-item">
+                        <a href="https://www.instagram.com/uow_hindusoc/"><img src="Images/instagram.png" alt="@uow_hindusoc instagram" class="insta"></a>
+                        <p>@uow_hindusoc</p>
+                    </div>
+                    <div class="social-media-item">
+                        <a href="https://www.instagram.com/nhsf_uk/"><img src="Images/instagram.png" alt="@nhsf_uk instagram" class="insta2"></a>
+                        <p class = "nhsf-insta">@nhsf_uk</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="contact-info">
+            <p class="copyright">&copy; 2024 UoW Hindu Society. All rights reserved.</p>
+        </div>
+        <div class="social-media">
+            <a href="https://www.instagram.com/uow_hindusoc/"><img src="Images/instagram.png" alt="@uow_hindusoc instagram" class="insta"></a>
+            <a href="https://www.tiktok.com/@uow_hindusoc?lang=en"><img src="Images/tik-tok.png" alt="@uow_hindusoc tiktok" class="tiktok"></a>
+            <p>@uow_hindusoc</p>
+        </div>
+    </footer>
+
+    <script>
+        const burgerMenu = document.getElementById('burger-menu');
+        const navLinks = document.getElementById('nav-menu');
+        const accessibilityMenu = document.getElementById('accessibility-menu');
+
+        burgerMenu.addEventListener('click', () => {
+            navLinks.classList.toggle('show');
+            burgerMenu.classList.toggle('active');
+        });
+
+        function toggleAccessibilityMenu() {
+            accessibilityMenu.classList.toggle('show');
+        }
+
+        function increaseFontSize() {
+            document.body.style.fontSize = 'larger';
+        }
+
+        function decreaseFontSize() {
+            document.body.style.fontSize = 'smaller';
+        }
+
+        function toggleColorBlindMode() {
+            document.body.classList.toggle('color-blind');
+        }
+
+        function toggleHighContrast() {
+            document.body.classList.toggle('high-contrast');
+        }
+
+        function resetView() {
+            document.body.style.fontSize = '';
+            document.body.classList.remove('color-blind');
+            document.body.classList.remove('high-contrast');
+        }
+
+        function updateEventImage(eventId, imageUrl) {
+            document.getElementById(eventId).src = imageUrl;
+        }
+
+
+        function calculateTimeRemaining(eventDate) {
+            const now = new Date().getTime();
+            const timeRemaining = eventDate - now;
+            
+            const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
+            
+            return { days, hours, minutes, seconds };
+        }
+
+        function updateTimer(elementId, eventDate) {
+            const timerElement = document.getElementById(elementId);
+            const { days, hours, minutes, seconds } = calculateTimeRemaining(eventDate);
+            
+            timerElement.innerHTML = `Time remaining: ${days}d ${hours}h ${minutes}m ${seconds}s`;
+        }
+
+        // Example event date for the timer
+        const eventDate = new Date('August 18, 2024 00:00:00').getTime();
+
+        // Update timer every second
+        setInterval(() => {
+            updateTimer('timer-1', eventDate);
+        }, 1000);
+
+    </script>
+</body>
+</html>

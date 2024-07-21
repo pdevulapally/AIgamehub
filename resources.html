@@ -1,0 +1,1102 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- This website is created by Preetham Devulapally for Hindu society. All rights reserved © -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UoW Hindu Society Resources</title>
+    <link rel="icon" href="Images/favicon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="resource.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+</head>
+<body>
+    <header>
+        <a href="Home.html"><img src="Images/Hindusoclogo.png" alt="UoW Hindu Society Logo" class="logo"></a>
+        <h1>UoW Hindu Society</h1>
+        <nav>
+            <div class="burger-menu" id="burger-menu">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <ul id="nav-menu">
+                <li><a href="index.html">About Us</a></li>
+                <li><a href="nhsfaffiliate.html">About NHSF</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="resources.html">Resources</a></li>
+                <li><a href="contact.html" class="active">Contact Us</a></li>
+            </ul>
+        </nav>
+        <button class="accessibility-button" onclick="toggleAccessibilityMenu()">
+            <span class="material-symbols-outlined">accessibility</span>
+        </button>
+        <div class="accessibility-menu" id="accessibility-menu">
+            <button onclick="increaseFontSize()">A+</button>
+            <button onclick="decreaseFontSize()">A-</button>
+            <button onclick="toggleHighContrast()">High Contrast</button>
+            <button onclick="resetView()">Normal View</button>
+            <button onclick="toggleColorBlindMode()">Color Blind Mode</button>
+        </div>
+    </header>
+
+    <section id="resources" class="resources">
+        <div class="container">
+            <h2>Resources</h2>
+            <label for="language-select">Choose a language:</label>
+            <select id="language-select" onchange="updateLanguage()">
+                <option value="en">English</option>
+                <option value="sa">Sanskrit</option>
+                <option value="hi">Hindi</option>
+                <option value="bn">Bengali</option>
+                <option value="ta">Tamil</option>
+                <option value="te">Telugu</option>
+                <option value="ml">Malayalam</option>
+                <option value="kn">Kannada</option>
+                <option value="ne">Nepali</option>
+            </select>
+
+            <!-- Ganesh Mantra -->
+            <div class="mantra" id="ganesh-mantra">
+                <h3>Ganesh Mantra</h3>
+                <p class="mantra-text" data-mantra="ganesh">
+                    <span data-lang="en">Vakratunda Mahakaya Suryakoti Samaprabha<br>Nirvighnam Kurume Deva Sarva Karyeshu Sarvada</span>
+                    <span data-lang="sa" style="display: none;">वक्रतुण्ड महाकाय सूर्यकोटि समप्रभ<br>निर्विघ्नं कुरु मे देव सर्वकार्येषु सर्वदा</span>
+                    <span data-lang="hi" style="display: none;">वक्रतुंड महाकाय सूर्यकोटि समप्रभ<br>निर्विघ्नं कुरु मे देव सर्वकार्येषु सर्वदा</span>
+                    <span data-lang="bn" style="display: none;">বক্রতুন্ড মহাকায় সুর্যকোটী সমপ্রভ<br>নির্বিঘ্নং কুরু মেঃ দেব সর্বকার্যেষু সর্বদা</span>
+                    <span data-lang="ta" style="display: none;">வக்ரதுண்ட மகாகாய சூரியகோடி சமப்ரபா<br>நிர்விக்னம் குருமே தேவா ஸர்வ கார்யேஷு ஸர்வதா</span>
+                    <span data-lang="te" style="display: none;">వక్రతుండ మహాకాయ సూర్యకోటి సమప్రభ<br>నిర్విఘ్నం కురు మే దేవా సర్వ కార్యేషు సర్వదా</span>
+                    <span data-lang="ml" style="display: none;">വക്രതുണ്ട മഹാകായ സൂര്യകോടി സമപ്രഭ<br>നിര്‍വിഘ്നം കുറു മേ ദേവ സര്വകാര്യമേശു സര്വദാ</span>
+                    <span data-lang="kn" style="display: none;">ವಕ್ರತುಂಡ ಮಹಾಕಾಯ ಸೂರ್ಯಕೋಟಿ ಸಮಪ್ರಭ<br>ನಿರ್ವಿಘ್ನಂ ಕುರು ಮೇ ದೇವ ಸರ್ವಕಾರ್ಯೇಷು ಸರ್ವದಾ</span>
+                    <span data-lang="ne" style="display: none;">वक्रतुंड महाकाय सूर्यकोटि समप्रभ<br>निर्विघ्नं कुरु मे देव सर्वकार्येषु सर्वदा</span>
+                    <p class = "meaning-h1">English Meaning:</p>
+                    <p class = "meaning-p">(I meditate on Sri Ganesha) Who had a curved trunk,large body and who has the brilliance of a million suns. <br> O Ganesha, please make all my endeavors free of obstacles. always.</p>
+                </p>
+                <a href="nhsf_Mantra_Book.pdf" download="nhsf_Mantra_Book.pdf" class="download-link"><i class="fas fa-download"></i> Download PDF</a>
+            </div>
+
+            <!-- Saraswati Mantra -->
+            <div class="mantra" id="saraswati-mantra">
+                <h3>Saraswati Mantra</h3>
+                <p class="mantra-text" data-mantra="saraswati">
+                    <span data-lang="en">Saraswati Namastubhyam Varade Kamarupini<br>Vidhyarambham Karishyami Siddhir Bhavatu Me Sada</span>
+                    <span data-lang="sa" style="display: none;">सरस्वति नमस्तुभ्यं वरदे कामरूपिणि<br>विद्यारंभं करिष्यामि सिद्धिर्भवतु मे सदा</span>
+                    <span data-lang="hi" style="display: none;">सरस्वति नमस्तुभ्यं वरदे कामरूपिणि<br>विद्यारंभं करिष्यामि सिद्धिर्भवतु मे सदा</span>
+                    <span data-lang="bn" style="display: none;">সরস্বতি নমস্তুভ্যং বরদে কামরূপিণী<br>বিদ্যারম্ভং করিষ্যামি সিদ্ধির্ভবতু মে সদা</span>
+                    <span data-lang="ta" style="display: none;">சரஸ்வதி நமஸ்துப்யம் வரதே காமரூபிணி<br>வித்யாரம்பம் கரிஷ்யாமி சித்திர்பவது மே ஸதா</span>
+                    <span data-lang="te" style="display: none;">సరస్వతి నమస్తుభ్యం వరదే కామరూపిణి<br>విద్యారంభం కరిష్యామి సిద్ధిర్భవతు మే సదా</span>
+                    <span data-lang="ml" style="display: none;">സരസ്വതി നമസ്തുഭ്യം വരദേ കാമരൂപിണി<br>വിദ്യാരംഭം കരിഷ്യാമി സിദ്ധിര്‍ ഭവതു മേ സദാ</span>
+                    <span data-lang="kn" style="display: none;">ಸರಸ್ವತಿ ನಮಸ್ತುಭ್ಯಂ ವರದೆ ಕಾಮರೂಪಿಣಿ<br>ವಿದ್ಯಾರಂಭಂ ಕರಿಷ್ಯಾಮಿ ಸಿದ್ಧಿರ್ಭವತು ಮೇ ಸದಾ</span>
+                    <span data-lang="ne" style="display: none;">सरस्वति नमस्तुभ्यं वरदे कामरूपिणि<br>विद्यारंभं करिष्यामि सिद्धिर्भवतु मे सदा</span>
+                     <p class = "meaning-h1">English Meaning:</p>
+                    <p class = "meaning-p">Salutations to Devi Saraswati, Who is the giver of Boons and fulfiller of Wishes. <br> O Devi when I begin my studies, Please bestow on me the capacity of Right Understanding, always.</p>
+                </p>
+                <a href="nhsf_Mantra_Book.pdf" download="nhsf_Mantra_Book.pdf" class="download-link"><i class="fas fa-download"></i> Download PDF</a>
+            </div>
+
+            <!-- Morning Mantras -->
+            <div class="mantra" id="morning-mantras">
+                <h3>Morning Mantras</h3>
+                <p class="mantra-text" data-mantra="morning">
+                    <span data-lang="en">Om Bhur Bhuvaḥ Swaḥ<br>Tat Savitur Vareṇyaṃ<br>Bhargo Devasya Dhīmahi<br>Dhiyo Yo Naḥ Prachodayāt</span>
+                    <span data-lang="sa" style="display: none;">ॐ भूर्भुवः स्वः<br>तत्सवितुर्वरेण्यं<br>भर्गो देवस्य धीमहि<br>धियो यो नः प्रचोदयात्</span>
+                    <span data-lang="hi" style="display: none;">ॐ भूर्भुवः स्वः<br>तत्सवितुर्वरेण्यं<br>भर्गो देवस्य धीमहि<br>धियो यो नः प्रचोदयात्</span>
+                    <span data-lang="bn" style="display: none;">ওঁ ভুর্ভুবঃ স্বঃ<br>তৎ সবিতুর্বরেণ্যং<br>ভর্গো দেবস্য ধীমহি<br>ধিয়ো যোনঃ প্রচোদয়াৎ</span>
+                    <span data-lang="ta" style="display: none;">ஓம் பூர்புவ ஸ்வஹா<br>தத் ஸவிதுர் வரேண்யம்<br>பர்கோ தேவஸ்ய தீமஹி<br>தீயோ யோ ந: ப்ரசோதயாத்</span>
+                    <span data-lang="te" style="display: none;">ఓం భూర్భువః స్వః<br>తత్ సవితుర్ వరేణ్యం<br>భర్గో దేవస్య ధీమహి<br>ధియో యో నః ప్రచోదయాత్</span>
+                    <span data-lang="ml" style="display: none;">ഓം ഭൂര്‍ ഭുവസ്വഃ<br>തത് സവിതുര്‍ വരേണ്യം<br>ഭര്‍ഗോ ദേവസ്യ ധീമഹി<br>ധിയോ യോ നഃ പ്രചോദയാത്</span>
+                    <span data-lang="kn" style="display: none;">ಓಂ ಭೂರ್ಭುವಃ ಸ್ವಃ<br>ತತ್ ಸವಿದುರ್ವರೇಣ್ಯಂ<br>ಭರ್ಗೋ ದೇವಸ್ಯ ಧೀಮಹಿ<br>ಧಿಯೋ ಯೋ ನಃ ಪ್ರಚೋದಯಾತ್</span>
+                    <span data-lang="ne" style="display: none;">ॐ भूर्भुवः स्वः<br>तत्सवितुर्वरेण्यं<br>भर्गो देवस्य धीमहि<br>धियो यो नः प्रचोदयात्</span>
+                    <p class = "meaning-h1">English Meaning:</p>
+                    <p class = "meaning-p">O Bhagavan! You are the giver of life. the remover of pains and sorrows, and the bestower of happiness,O creator of the universe. may we receive the supreme light. May you guide our intellect in the right direction,</p>
+                </p>
+                <a href="nhsf_Mantra_Book.pdf" download="nhsf_Mantra_Book.pdf" class="download-link"><i class="fas fa-download"></i> Download PDF</a>
+            </div>
+
+    <div class="mantra" id="hanuman-chalisa">
+    <h3>Hanuman Chalisa</h3>
+    <p class="mantra-text" data-mantra="hanuman-chalisa">
+        <!-- Short Version (First Few Verses) -->
+        <span data-lang="en">Shri Guru Charan Saroj Raj<br>Nij Man Mukur Sudhari<br>Baranau Raghuvar Vimal Jasu<br>Jo Dayaku Phal Chari<br>Budhi Hin Tanu Janike<br>Sumirau Pavan Kumar<br>Bal Budhi Vidya Dehu Mohi<br>Harahu Kales Vikar</span>
+        <span data-lang="sa" style="display: none;">श्रीगुरु चरण सरोज रज<br>निज मन मुकुर सुधारि<br>बरनऊं रघुबर बिमल जसु<br>जो दायकु फल चारि<br>बुद्धिहीन तनु जानिके<br>सुमिरौ पवन कुमार<br>बल बुद्धि विद्या देहु मोहिं<br>हरहु कलेस विकार</span>
+        <span data-lang="hi" style="display: none;">श्रीगुरु चरण सरोज रज<br>निज मन मुकुर सुधारि<br>बरनऊं रघुबर बिमल जसु<br>जो दायकु फल चारि<br>बुद्धिहीन तनु जानिके<br>सुमिरौ पवन कुमार<br>बल बुद्धि विद्या देहु मोहिं<br>हरहु कलेस विकार</span>
+        <span data-lang="bn" style="display: none;">শ্রীগুরু চরণ সরোজ রজ<br>নিজ মন মুকুর সুধারি<br>বরনউ রঘুবর বিমল জসু<br>যো দায়াকু ফল চারি<br>বুদ্ধিহীন তনু জানিকে<br>সুমিরউ পবন কুমার<br>বল বুদ্ধি বিদ্যা দেহু মোহি<br>হারহু ক্লেশ বিকার</span>
+        <span data-lang="ta" style="display: none;">ஸ்ரீகுரு சரண சரோஜ ரஜ<br>நிஜ மன முகுரு சுதாரி<br>பரணௌ ரகுபர விமல ஜஸு<br>ஜோ தயாகு பல சாரி<br>புத்திஹீன் தனு ஜானிகே<br>சுமிரௌ பவன குமார<br>பல புத்தி வித்யா தேகு மோகி<br>ஹரஹு கலேஸ விகார்</span>
+        <span data-lang="te" style="display: none;">శ్రీగురు చరణ సరోజ రజ<br>నిజ మన ముఖురు సుధారి<br>వరణౌ రఘువర విమల జసు<br>జో దాయకు ఫల చారి<br>బుద్ధిహీన తను జానికే<br>సుమిరౌ పవన కుమార్<br>బల బుద్ధి విద్యా దేహు మోహి<br>హరహు కలేస వికార్</span>
+        <span data-lang="ml" style="display: none;">ശ്രീഗുരു ചരന സരോജ രജ<br>നിജ മന മുഖുര് സുദാരി<br>വരണൌ രഘുബര് വിമല ജസു<br>ജോ ദായകു ഫല ചാരി<br>ബുദ്ധിഹീന തനു ജാനികേ<br>സുമിരൌ പവന കുമാര<br>ബല് ബുദ്ധി വിദ്യാ ദേഹു മോഹി<br>ഹരഹു കലെസ വികാര</span>
+        <span data-lang="kn" style="display: none;">ಶ್ರೀಗುರು ಚರಣ ಸരോಜ ರಜ<br>ನಿಜ ಮನ ಮುಖುರ ಸುಧಾರಿ<br>ವರಣೌ ರಘುಬರ ವಿಮಲ ಜಸು<br>ಜೋ ದಾಯಕು ಫಲ ಚಾರಿ<br>ಬುದ್ಧಿಹೀನ ತನು ಜಾನಿಕೇ<br>ಸುಮಿರೌ ಪವನ ಕುಮಾರ<br>ಬಲ ಬುದ್ಧಿ ವಿದ್ಯಾ ದೇಹು ಮೋಹಿ<br>ಹರಹು ಕಲೆಸ ವಿಕಾರ</span>
+        <span data-lang="ne" style="display: none;">श्रीगुरु चरण सरोज रज<br>निज मन मुकुर सुधारि<br>बरनऊं रघुबर बिमल जसु<br>जो दायकु फल चारि<br>बुद्धिहीन तनु जानिके<br>सुमिरौ पवन कुमार<br>बल बुद्धि विद्या देहु मोहिं<br>हरहु कलेस विकार</span>
+    </p>
+    <button class="read-more-button" onclick="showFullMantra('hanuman-chalisa')">Read More</button>
+    <a href="nhsf_Mantra_Book.pdf" download="nhsf_Mantra_Book.pdf" class="download-link"><i class="fas fa-download"></i> Download PDF</a>
+</div>
+
+<!-- Popup for Full Mantra -->
+<div id="mantra-popup" class="mantra-popup" style="display: none;">
+    <div class="mantra-popup-content">
+        <span class="close-button" onclick="closePopup()">&times;</span>
+        <h3>Hanuman Chalisa</h3>
+        <p class="mantra-text" data-mantra="hanuman-chalisa-full">
+            <!-- Full Version -->
+            <span data-lang="en">
+                Shri Guru Charan Saroj Raj<br>
+                Nij Man Mukur Sudhari<br>
+                Baranau Raghuvar Vimal Jasu<br>
+                Jo Dayaku Phal Chari<br>
+                Budhi Hin Tanu Janike<br>
+                Sumirau Pavan Kumar<br>
+                Bal Budhi Vidya Dehu Mohi<br>
+                Harahu Kales Vikar<br>
+                Jai Hanuman Gyan Guna Sagar<br>
+                Jai Kapis Tihun Lok Ujagar<br>
+                Ram Doot Atulit Bal Dhama<br>
+                Anjani Putra Pavan Sut Nama<br>
+                Mahavir Vikram Bajrangi<br>
+                Kumati Nivar Sumati Ke Sangi<br>
+                Kanchan Baran Viraj Suvesa<br>
+                Kanan Kundal Kunchit Kesa<br>
+                Hath Vajra Aur Dhuvaje Viraje<br>
+                Kandhe Munj Janeu Sajai<br>
+                Sankar Suvan Kesari Nandan<br>
+                Tej Pratap Maha Jag Vandan<br>
+                Vidyavan Guni Ati Chatur<br>
+                Ram Kaj Karibe Ko Atur<br>
+                Prabhu Charitra Sunibe Ko Rasiya<br>
+                Ram Lakhan Sita Man Basiya<br>
+                Sukshma Roop Dhari Siyahi Dikhava<br>
+                Vikat Roop Dhari Lanka Jarava<br>
+                Bhima Roop Dhari Asur Samhare<br>
+                Ramachandra Ke Kaj Savare<br>
+                Laye Sanjivan Lakhan Jiyaye<br>
+                Shri Raghubir Harashi Ur Laye<br>
+                Raghupati Kinhi Bahut Badai<br>
+                Tum Mama Priya Bharat Sam Bhai<br>
+                Sahas Badan Tumharo Yash Gaave<br>
+                Asa-Kahi Shripati Kanth Laagave<br>
+                Sankadik Brahmadi Muneesa<br>
+                Narad Sarad Sahit Aheesa<br>
+                Yam-Kuber Digpal Jahan Te<br>
+                Kavi Kovid Kahin Sake Kahan Te<br>
+                Tum Upkar Sugrivahi Keenha<br>
+                Ram Milaye Rajpad Deenha<br>
+                Tumharo Mantra Vibhishan Maana<br>
+                Lankeshwar Bhaye Sab Jag Jaana<br>
+                Yug Sahastra Yojan Par Bhanu<br>
+                Leelyo Taahi Madhur Phal Jaanu<br>
+                Prabhu Mudrika Meli Mukha Maahi<br>
+                Jaladhi Langhi Gaye Achraj Naahi<br>
+                Durgam Kaj Jagat Ke Jete<br>
+                Sugam Anugrah Tumhre Tete<br>
+                Ram Duare Tum Rakhvare<br>
+                Hot Na Aagya Bin Paisare<br>
+                Sab Sukh Lahai Tumhari Sarna<br>
+                Tum Rakshak Kaahu Ko Darna<br>
+                Aapan Tej Samharo Aapai<br>
+                Teenhon Lok Haank Te Kaapai<br>
+                Bhoot Pisaach Nikat Nahi Aavai<br>
+                Mahavir Jab Naam Sunavai<br>
+                Naasai Rog Harai Sab Peera<br>
+                Japata Nirantara Hanumata Veera<br>
+                Sankat Te Hanuman Chhudavai<br>
+                Man Kram Vachan Dhyan Jo Lavai<br>
+                Sab Par Ram Tapasvi Raja<br>
+                Tin Ke Kaj Sakal Tum Saaja<br>
+                Aur Manorath Jo Koi Lavai<br>
+                Soi Amit Jivan Phal Pavai<br>
+                Charho Yug Partap Tumhara<br>
+                Hai Parsiddha Jagat Ujiyara<br>
+                Sadhu Sant Ke Tum Rakhvare<br>
+                Asur Nikandan Ram Dulare<br>
+                Ashta Siddhi Nau Nidhi Ke Data<br>
+                Asa Bar Din Janki Mata<br>
+                Ram Rasayan Tumhre Pasa<br>
+                Sada Raho Raghupati Ke Dasa<br>
+                Tumhre Bhajan Ramko Pavai<br>
+                Janam Janam Ke Dukh Bisravai<br>
+                Anta Kaal Raghupati Pur Jai<br>
+                Jahan Janma Hari Bhakta Kahai<br>
+                Aur Devata Chitt Na Dharai<br>
+                Hanumat Sei Sarva Sukh Karai<br>
+                Sankat Kate Mite Sab Peera<br>
+                Jo Sumirai Hanumat Balbeera<br>
+                Jai Jai Jai Hanuman Gosain<br>
+                Kripa Karahu Guru Dev Ki Naai<br>
+                Jo Sat Baar Paath Kar Koi<br>
+                Chhutahi Bandi Maha Sukh Hoi<br>
+                Jo Yah Padhe Hanuman Chalisa<br>
+                Hoye Siddhi Sakhi Gaureesa<br>
+                Tulsidas Sada Hari Chera<br>
+                Keejai Das Hridaya Mah Dera<br>
+                Pavan Tanay Sankat Haran<br>
+                Mangal Murti Roop<br>
+                Ram Lakhan Sita Sahit<br>
+                Hridaya Basahu Sur Bhoop
+            </span>
+            <span data-lang="sa" style="display: none;">
+                श्रीगुरु चरण सरोज रज<br>
+                निज मन मुकुर सुधारि<br>
+                बरनऊं रघुबर बिमल जसु<br>
+                जो दायकु फल चारि<br>
+                बुद्धिहीन तनु जानिके<br>
+                सुमिरौ पवन कुमार<br>
+                बल बुद्धि विद्या देहु मोहिं<br>
+                हरहु कलेस विकार<br>
+                जय हनुमान ज्ञान गुण सागर<br>
+                जय कपीस तिहुँ लोक उजागर<br>
+                राम दूत अतुलित बलधामा<br>
+                अंजनि-पुत्र पवनसुत नामा<br>
+                महाबीर बिक्रम बजरंगी<br>
+                कुमति निवार सुमति के संगी<br>
+                कंचन बरन बिराज सुबेसा<br>
+                कानन कुंडल कुंचित केसा<br>
+                हाथ वज्र औ ध्वजा बिराजै<br>
+                कांधे मूँज जनेऊ साजै<br>
+                शंकर सुवन केसरी नंदन<br>
+                तेज प्रताप महा जग बन्दन<br>
+                विद्या वान गुणी अति चातुर<br>
+                राम काज करिबे को आतुर<br>
+                प्रभु चरित्र सुनिबे को रसिया<br>
+                राम लखन सीता मन बसिया<br>
+                सूक्ष्म रूप धरि सियहिं दिखावा<br>
+                बिकट रूप धरि लंक जरावा<br>
+                भीम रूप धरि असुर सँहारे<br>
+                रामचंद्र के काज सँवारे<br>
+                लाय संजीवन लखन जियाये<br>
+                श्री रघुबीर हरषि उर लाये<br>
+                रघुपति कीन्ही बहुत बड़ाई<br>
+                तुम मम प्रिय भरतहि सम भाई<br>
+                सहस बदन तुम्हरो यश गावैं<br>
+                अस कहि श्रीपति कंठ लगावैं<br>
+                सनकादिक ब्रह्मादि मुनीसा<br>
+                नारद सारद सहित अहीसा<br>
+                जम कुबेर दिगपाल जहां ते<br>
+                कबि कोबिद कहि सके कहां ते<br>
+                तुम उपकार सुग्रीवहिं कीन्हा<br>
+                राम मिलाय राजपद दीन्हा<br>
+                तुम्हरो मंत्र बिभीषण माना<br>
+                लंकेस्वर भए सब जग जाना<br>
+                युग सहस्र योजन पर भानू<br>
+                लील्यो ताहि मधुर फल जानू<br>
+                प्रभु मुद्रिका मेलि मुख माही<br>
+                जलधि लाँघि गये अचरज नाहीं<br>
+                दुर्गम काज जगत के जेते<br>
+                सुगम अनुग्रह तुम्हरे तेते<br>
+                राम दुआरे तुम रखवारे<br>
+                होत न आज्ञा बिनु पैसारे<br>
+                सब सुख लहै तुम्हारी सरना<br>
+                तुम रक्षक काहू को डरना<br>
+                आपन तेज सम्हारो आपै<br>
+                तीनों लोक हाँक तें काँपै<br>
+                भूत पिशाच निकट नहिं आवै<br>
+                महाबीर जब नाम सुनावै<br>
+                नासै रोग हरै सब पीरा<br>
+                जपत निरंतर हनुमत बीरा<br>
+                संकट तें हनुमान छुड़ावै<br>
+                मन क्रम वचन ध्यान जो लावै<br>
+                सब पर राम तपस्वी राजा<br>
+                तिन के काज सकल तुम साजा<br>
+                और मनोरथ जो कोई लावै<br>
+                सोइ अमित जीवन फल पावै<br>
+                चारों जुग परताप तुम्हारा<br>
+                है परसिद्ध जगत उजियारा<br>
+                साधु संत के तुम रखवारे<br>
+                असुर निकंदन राम दुलारे<br>
+                अष्ट सिद्धि नव निधि के दाता<br>
+                अस वर दीन्ह जानकी माता<br>
+                राम रसायन तुम्हरे पासा<br>
+                सदा रहो रघुपति के दासा<br>
+                तुम्हरे भजन राम को पावै<br>
+                जनम जनम के दुख बिसरावै<br>
+                अन्त काल रघुबर पुर जाई<br>
+                जहाँ जन्म हरि-भक्त कहाई<br>
+                और देवता चित्त न धरई<br>
+                हनुमत सेइ सर्ब सुख करई<br>
+                संकट कटै मिटै सब पीरा<br>
+                जो सुमिरै हनुमत बलबीरा<br>
+                जय जय जय हनुमान गोसाईं<br>
+                कृपा करहु गुरु देव की नाईं<br>
+                जो सत बार पाठ कर कोई<br>
+                छूटहि बन्दि महा सुख होई<br>
+                जो यह पढ़ै हनुमान चालीसा<br>
+                होय सिद्धि साखी गौरीसा<br>
+                तुलसीदास सदा हरि चेरा<br>
+                कीजै नाथ हृदय मंह डेरा<br>
+                पवनतनय संकट हरन<br>
+                मंगलमूर्ति रूप<br>
+                राम लखन सीता सहित<br>
+                हृदय बसहु सुर भूप
+            </span>
+            <span data-lang="hi" style="display: none;">
+                श्रीगुरु चरण सरोज रज<br>
+                निज मन मुकुर सुधारि<br>
+                बरनऊं रघुबर बिमल जसु<br>
+                जो दायकु फल चारि<br>
+                बुद्धिहीन तनु जानिके<br>
+                सुमिरौ पवन कुमार<br>
+                बल बुद्धि विद्या देहु मोहिं<br>
+                हरहु कलेस विकार<br>
+                जय हनुमान ज्ञान गुण सागर<br>
+                जय कपीस तिहुँ लोक उजागर<br>
+                राम दूत अतुलित बलधामा<br>
+                अंजनि-पुत्र पवनसुत नामा<br>
+                महाबीर बिक्रम बजरंगी<br>
+                कुमति निवार सुमति के संगी<br>
+                कंचन बरन बिराज सुबेसा<br>
+                कानन कुंडल कुंचित केसा<br>
+                हाथ वज्र औ ध्वजा बिराजै<br>
+                कांधे मूँज जनेऊ साजै<br>
+                शंकर सुवन केसरी नंदन<br>
+                तेज प्रताप महा जग बन्दन<br>
+                विद्या वान गुणी अति चातुर<br>
+                राम काज करिबे को आतुर<br>
+                प्रभु चरित्र सुनिबे को रसिया<br>
+                राम लखन सीता मन बसिया<br>
+                सूक्ष्म रूप धरि सियहिं दिखावा<br>
+                बिकट रूप धरि लंक जरावा<br>
+                भीम रूप धरि असुर सँहारे<br>
+                रामचंद्र के काज सँवारे<br>
+                लाय संजीवन लखन जियाये<br>
+                श्री रघुबीर हरषि उर लाये<br>
+                रघुपति कीन्ही बहुत बड़ाई<br>
+                तुम मम प्रिय भरतहि सम भाई<br>
+                सहस बदन तुम्हरो यश गावैं<br>
+                अस कहि श्रीपति कंठ लगावैं<br>
+                सनकादिक ब्रह्मादि मुनीसा<br>
+                नारद सारद सहित अहीसा<br>
+                जम कुबेर दिगपाल जहां ते<br>
+                कबि कोबिद कहि सके कहां ते<br>
+                तुम उपकार सुग्रीवहिं कीन्हा<br>
+                राम मिलाय राजपद दीन्हा<br>
+                तुम्हरो मंत्र बिभीषण माना<br>
+                लंकेस्वर भए सब जग जाना<br>
+                युग सहस्र योजन पर भानू<br>
+                लील्यो ताहि मधुर फल जानू<br>
+                प्रभु मुद्रिका मेलि मुख माही<br>
+                जलधि लाँघि गये अचरज नाहीं<br>
+                दुर्गम काज जगत के जेते<br>
+                सुगम अनुग्रह तुम्हरे तेते<br>
+                राम दुआरे तुम रखवारे<br>
+                होत न आज्ञा बिनु पैसारे<br>
+                सब सुख लहै तुम्हारी सरना<br>
+                तुम रक्षक काहू को डरना<br>
+                आपन तेज सम्हारो आपै<br>
+                तीनों लोक हाँक तें काँपै<br>
+                भूत पिशाच निकट नहिं आवै<br>
+                महाबीर जब नाम सुनावै<br>
+                नासै रोग हरै सब पीरा<br>
+                जपत निरंतर हनुमत बीरा<br>
+                संकट तें हनुमान छुड़ावै<br>
+                मन क्रम वचन ध्यान जो लावै<br>
+                सब पर राम तपस्वी राजा<br>
+                तिन के काज सकल तुम साजा<br>
+                और मनोरथ जो कोई लावै<br>
+                सोइ अमित जीवन फल पावै<br>
+                चारों जुग परताप तुम्हारा<br>
+                है परसिद्ध जगत उजियारा<br>
+                साधु संत के तुम रखवारे<br>
+                असुर निकंदन राम दुलारे<br>
+                अष्ट सिद्धि नव निधि के दाता<br>
+                अस वर दीन्ह जानकी माता<br>
+                राम रसायन तुम्हरे पासा<br>
+                सदा रहो रघुपति के दासा<br>
+                तुम्हरे भजन राम को पावै<br>
+                जनम जनम के दुख बिसरावै<br>
+                अन्त काल रघुबर पुर जाई<br>
+                जहाँ जन्म हरि-भक्त कहाई<br>
+                और देवता चित्त न धरई<br>
+                हनुमत सेइ सर्ब सुख करई<br>
+                संकट कटै मिटै सब पीरा<br>
+                जो सुमिरै हनुमत बलबीरा<br>
+                जय जय जय हनुमान गोसाईं<br>
+                कृपा करहु गुरु देव की नाईं<br>
+                जो सत बार पाठ कर कोई<br>
+                छूटहि बन्दि महा सुख होई<br>
+                जो यह पढ़ै हनुमान चालीसा<br>
+                होय सिद्धि साखी गौरीसा<br>
+                तुलसीदास सदा हरि चेरा<br>
+                कीजै नाथ हृदय मंह डेरा<br>
+                पवनतनय संकट हरन<br>
+                मंगलमूर्ति रूप<br>
+                राम लखन सीता सहित<br>
+                हृदय बसहु सुर भूप
+            </span>
+            <span data-lang="bn" style="display: none;">
+                শ্রীগুরু চরণ সরোজ রজ<br>
+                নিজ মন মুকুর সুধারি<br>
+                বরনউ রঘুবর বিমল জসু<br>
+                যো দায়াকু ফল চারি<br>
+                বুদ্ধিহীন তনু জানিকে<br>
+                সুমিরউ পবন কুমার<br>
+                বল বুদ্ধি বিদ্যা দেহু মোহি<br>
+                হারহু ক্লেশ বিকার<br>
+                জয় হনুমান জ্ঞান গুন সাগর<br>
+                জয় কপিস তিহু লোক উজাগর<br>
+                রাম দূত অতুলিত বলধামা<br>
+                অঞ্জনি-পুত্র পবনসুত নামা<br>
+                মহাবীর বিক্রম বজরঙ্গী<br>
+                কুমতি নিবার সুমতি কে সঙ্গী<br>
+                কঞ্চন বরন বিরাজ সুবেসা<br>
+                কানন কুন্ডল কুঞ্চিত কেশা<br>
+                হাত বজ্র ঔ ধ্বজা বিরাজে<br>
+                কাঁধে মুঞ্জ জণেউ সাজে<br>
+                শঙ্কর সুৱন কেশরী নন্দন<br>
+                তেজ প্রতাপ মহা জগ বন্দন<br>
+                বিদ্যা বাণ গুণী অতি চাতুৰ<br>
+                রাম কজ করিবে কো আতুৰ<br>
+                প্ৰভু চরিত্র শুনিবে কো ৰসিয়া<br>
+                রাম লখন সীতা মন বসিয়া<br>
+                সূক্ষ্ম রূপ ধরি সিয়হি দেখাৱা<br>
+                বিকট রূপ ধরি লঙ্ক জড়াৱা<br>
+                ভীম রূপ ধরি অসুর সঁহারে<br>
+                রামচন্দ্ৰ কে কজ সঁৱাৰে<br>
+                লায় সঞ্জীৱন লখন জিয়ায়ে<br>
+                শ্রী ৰঘুবীর হৰষি উৰ লায়ে<br>
+                ৰঘুপতি কীঁহি বহুত বঢ়াই<br>
+                তুম মম প্ৰিয় ভৰতহি সম ভাই<br>
+                সহস বদন তুমহরো যশ গাৱৈঁ<br>
+                আস কহি শ্ৰীপতি কন্থ লাগাৱৈঁ<br>
+                সনকাদিক ব্রহ্মাদিক মুনীশা<br>
+                নাৰদ সাৰদ সহিত অহীশা<br>
+                যম কুবের দিগপাল যাহঁ তে<br>
+                কবি কবিদ কহি সকে কাহঁ তে<br>
+                তুম উপকাৰ সুগ্রীৱহিঁ কীঁহা<br>
+                রাম মিলায় ৰাজপদ দীনহা<br>
+                তুমহরো মন্ত্র বিভীষণ মানা<br>
+                লংকেশ্বৰ ভৈ সব জগ জানা<br>
+                যুগ সহস্ত্ৰ যোজন পর ভানু<br>
+                লীল্যো তাহী মধুৰ ফল জানু<br>
+                প্ৰভু মুদ্রিকা মেলি মুখ মাহি<br>
+                জলধি লাঙ্গি গয়েঅ অচৰজ নাহি<br>
+                দূৰ্গম কজ জগত কে জেতে<br>
+                সুগম অনুগ্ৰহ তুমহ্ৰে তেতে<br>
+                ৰাম দুৱারে তুম ৰক্ষৱারে<br>
+                হোত ন আগ্যা বিনু পৈসাৰে<br>
+                সব সুখ লহৈ তুমহাৰি সরনা<br>
+                তুম ৰক্ষক কাহু কো ডরনা<br>
+                আপন তেজ সংহারো আপৈ<br>
+                তিনোঁ লোক হাঙ তে কাঁপৈ<br>
+                ভূত পিশাচ নিকট নহিঁ আৱৈ<br>
+                মহাবীর জব নাম সুনাৱৈ<br>
+                নাসৈ ৰোগ হৰৈ সব পীৰা<br>
+                জপত নিরন্তৰ হনুমত বীৰা<br>
+                সংকট তে হনুমান ছুড়াৱৈ<br>
+                মন কৰ্ম বচন ধ্যান জো লাৱৈ<br>
+                সব পর ৰাম তপস্বী ৰাজা<br>
+                তিন কে কজ সকল তুম সাজা<br>
+                ঔর মনোৰথ জো কৈ লাৱৈ<br>
+                সোই অমিত জীবন ফল পাৱৈ<br>
+                চারো যুগ প্ৰতাপ তুমহাৰা<br>
+                হ্যৈ পৰসিদ্ধ জগত উজিয়ারা<br>
+                সাধু সন্ত কে তুম ৰক্ষৱারে<br>
+                অসুৰ নিকন্দন ৰাম দুলাৰৈ<br>
+                অষ্ট সিদ্ধি নব নিধি কে দাতা<br>
+                আস বৰ দীনহ জানকী মাতা<br>
+                ৰাম ৰসায়ন তুমহ্ৰে পাসা<br>
+                সদা রহো ৰঘুপতি কে দাসা<br>
+                তুমহৰে ভজন ৰাম কো পাৱৈ<br>
+                জনম জনম কে দুখ বিসৰাৱৈ<br>
+                অন্ত কাল ৰঘুপতি পুৰ যাই<br>
+                যাহঁ জন্ম হৰি-ভক্ত কহাই<br>
+                ঔর দেৱতা চিত্ত ন ধৰই<br>
+                হনুমত সেয়ি সৰ্ব সুখ কৰৈ<br>
+                সংকট কটৈ মিটৈ সব পীৰা<br>
+                জো সুমিরৈ হনুমত ব’লবীৰা<br>
+                জয় জয় জয় হনুমান গোঁসাঁই<br>
+                কৃপা কৰহু গুরু দেৱ কি নাঁই<br>
+                জো সত বাৰ পাঠ কর কৈ<br>
+                ছুটহি বন্দি মহা সুখ হোই<br>
+                জো ইহ পড়ৈ হনুমান চালীসা<br>
+                হোয় সিদ্ধি সাখি গৌৰীসা<br>
+                তুলসীদাস সদা হৰি চেরা<br>
+                কীজৈ নাথ হৃদয় মহ দেৰা<br>
+                পৱনতনয় সংকট হৰণ<br>
+                মঙ্গলমূৰ্তি রূপ<br>
+                ৰাম লখন সীতা সহিত<br>
+                হৃদয় বসহু সুর ভূপ
+            </span>
+            <span data-lang="ta" style="display: none;">
+                ஸ்ரீகுரு சரண சரோஜ ரஜ<br>
+                நிஜ மன முகுரு சுதாரி<br>
+                பரணௌ ரகுபர விமல ஜஸு<br>
+                ஜோ தயாகு பல சாரி<br>
+                புத்திஹீன் தனு ஜானிகே<br>
+                சுமிரௌ பவன குமார<br>
+                பல புத்தி வித்யா தேகு மோகி<br>
+                ஹரஹு கலேஸ விகார்<br>
+                ஜய் அனுமான் ஞான குண சாகர்<br>
+                ஜய் கபீஸ் திஹு லோக் உஜாகர்<br>
+                ராம் தூத அதுலித பலதாமா<br>
+                அஞ்சனி புத்ர பவன்சுத நாமா<br>
+                மகாவீர் விக்ரம் பஜ்ரங்கி<br>
+                குமதி நிவார் ஸுமதி கே சங்கி<br>
+                கஞ்சன் பரன் விராஜு ஸுபேசா<br>
+                கானன் குண்டல குஞ்சித கேசா<br>
+                ஹாத் வாஜ்ர அௌ த்வஜா விராஜை<br>
+                காஂதே மூஞ்ச ஜணே உ சாஜை<br>
+                சங்கர் ஸுவன் கேஸரி நந்தன்<br>
+                தேஜ ப்ரதாப் மஹா ஜக் பந்தன்<br>
+                வித்யா வான் குணி அ஥ி சதுர்<br>
+                ராம் காஜ கரிபே கோ ஆதுர்<br>
+                ப்ரபு சரித்ர ஸுனிபே கோ ரஸியா<br>
+                ராம் லக்ஷன் சீதா மன பஸியா<br>
+                ஸுக்ஷ்ம ரூப தரி ஸியஹி திகாவா<br>
+                விகட் ரூப தரி லங்க ஜராவா<br>
+                பீம ரூப தரி அஸுர ஸம்ஹாரே<br>
+                ராமசந்த்ர கே காஜ ஸம்வாரே<br>
+                லாய ஸஞ்சீவன் லக்ஷன் ஜியாயே<br>
+                ஸ்ரீ ரகுபீர ஹரஷி உர லாயே<br>
+                ரகுபதி கீந்ஹி பகுத் படாய்<br>
+                தும் மம ப்ரிய பரத ஹி ஸம பாய்<br>
+                ஸஹஸ் பத்ந தும்ஹரோ யஶ் காவை<br>
+                அச கஹி ஸ்ரீபதி கந்த லாகாவை<br>
+                ஸநகாதிக் ப்ரஹ்மாதிக் முனிசா<br>
+                நாரத் சாரத் ஸஹித் அஹிசா<br>
+                யம் குபேர் திக்பால் ஜஹா தே<br>
+                கவி கோவித கஹி ஸகே கஹா தே<br>
+                தும் உபகார் சுக்ரீவஹி கீன்ஹா<br>
+                ராம் மிலாய ராஜ்பத் தீன்ஹா<br>
+                தும்ஹரோ மந்திர விபீஷண மானா<br>
+                லங்கேஸ்வர பயே ஸப ஜக ஜானா<br>
+                யுக ஸஹஸ்ர யோஜன் பர பானு<br>
+                லீல்யோ தாஹி மதுர பல ஜானு<br>
+                ப்ரபு முத்ரிகா மிலி முக மாஹி<br>
+                ஜலதிஹி லாங்கி கயே அசரஜ நாஹி<br>
+                துர்கம் காஜ ஜகத் கே ஜேதே<br>
+                ஸுகம் அனுக்ரஹ தும்ஹரே தேதே<br>
+                ராம் துவாரே தும் ரக்ஷாவரே<br>
+                ஹோத் நா ஆக்யா பின் பைஸாரே<br>
+                ஸப் ஸுக லஹே தும்ஹாரி ஸரணா<br>
+                தும் ரக்ஷக் காஹு கோ டரநா<br>
+                ஆபந தேஜ் ஸம்ஹாரோ ஆபை<br>
+                தீனோ லோக ஹா஁க் தே காபை<br>
+                பூத் பிஷாச் நிகத் நஹி ஆவை<br>
+                மஹாவீர் ஜப் நாம ஸுநாவை<br>
+                நாசை ரோக ஹரைய் ஸப் பீரா<br>
+                ஜபத் நிரந்தர் ஹனுமத் வீரா<br>
+                ஸங்கத் தே ஹனுமான் சுடாவை<br>
+                மன கர்ம பச ஦்
+                யான ஜோ லாவை<br>
+                ஸப் பர ராம் தபஸ்வி ராஜா<br>
+                தின் கே காஜ ஸகல் தும் ஸாஜா<br>
+                அஊர் மனோரத் ஜோ காய் லாவை<br>
+                ஸோய் அமித் ஜீவன் பல பாவை<br>
+                சாரோ யுக பரதாப் தும்ஹாரா<br>
+                ஹை பரஸித்த ஜகத் உஜியாரா<br>
+                ஸாது ஸந்த கே தும் ரக்ஷாவரே<br>
+                அஸுர் நிகந்தன் ராம் துலாரே<br>
+                அஷ்ட சித்தி நவ நிதி கே தாதா<br>
+                அச வர தீந்ஹ ஜானகி மாதா<br>
+                ராம் ரஸாயண் தும்ஹரே பாசா<br>
+                ஸதா ரஹோ ரகுபதி கே தாஸா<br>
+                தும்ஹரே பஜந் ராம் கோ பாவை<br>
+                ஜனம ஜநம் கே துக்க பிஸராவை<br>
+                அந்த கால ரகுபதி புர ஜாய்<br>
+                ஜஹா஁ ஜந்ம ஹரி-பக்த கஹாய்<br>
+                அஊர தேவதா சித்த ந தரய்<br>
+                ஹனுமத் ஸெய் சர்வ ஸுக கரை<br>
+                ஸங்கட் கடை மிடை ஸப் பீரா<br>
+                ஜோ ஸுமிரை ஹனுமத் பல்வீரா<br>
+                ஜய் ஜய் ஜய் ஹனுமான் கோஸாயி<br>
+                கிருபா கரஹு குரு தேவ கி நாயி<br>
+                ஜோ ஸத் பார ப஠் கரோ கோயி<br>
+                சுடஹி பந்தி மஹா ஸுக ஹோயி<br>
+                ஜோ யஹ படை ஹனுமான் சாலிசா<br>
+                ஹோய் சித்தி ஸாகி கவுரிசா<br>
+                துளசிதாஸ ஸதா ஹரி சேரா<br>
+                கிஜய் நாத ஹிருதய மஹ் டேரா<br>
+                பவநதனய ஸங்கட் ஹரண்<br>
+                மங்கலமூர்தி ரூப<br>
+                ராம் லக்ஷ்மண சீதா ஸஹித்<br>
+                ஹிருதய பஸஹூ ஸுர பூப
+            </span>
+            <span data-lang="te" style="display: none;">
+                శ్రీగురు చరణ సరోజ రజ<br>
+                నిజ మన ముఖుర సుధారి<br>
+                వరణౌ రఘువర విమల జసు<br>
+                జో దాయకు ఫల చారి<br>
+                బుద్ధిహీన తను జానికే<br>
+                సుమిరౌ పవన కుమార<br>
+                బల బుద్ధి విద్యా దేహు మోహి<br>
+                హరహు కలేస వికార్<br>
+                జయ హనుమాన్ జ్ఞాన గుణ సాగర<br>
+                జయ కపీసు తిహు లోక ఉజాగర<br>
+                రామ్ దూత అతులిత బలధామా<br>
+                అంజని పుత్ర పవన సుత నామా<br>
+                మహావీర విక్రమ బజరంగి<br>
+                కుమతి నివార సుమతి కె సంగి<br>
+                కంచన బరణ విరాజ సుబేసా<br>
+                కాణన కుండల కుంచిత కేశా<br>
+                హాథ వజ్ర ఔ ధ్వజా విరాజై<br>
+                కాంధే మూఁజ జణేఊ సాజై<br>
+                శంకర్ సువన కేసరీ నందన<br>
+                తేజ ప్రతాప మహా జగ వందన<br>
+                విద్యావాన గుణీ అతి చతుర<br>
+                రామ్ కాజ కరిబే కో ఆతుర<br>
+                ప్రభు చరిత్ర సునిబే కో రసియా<br>
+                రామ్ లకణ సీతా మన బసియా<br>
+                సుక్ష్మ రూప ధరి సియహి దిఖావా<br>
+                వికట రూప ధరి లంకా జరవా<br>
+                భీమ రూప ధరి అసుర సంహారే<br>
+                రామచంద్ర కే కాజ సంవారే<br>
+                లాయ సంజీవన లకణ జియాయే<br>
+                శ్రీ రఘువీర హరషి ఉర లాయే<br>
+                రఘుపతి కీన్హీ బహుత్ బడాయి<br>
+                తుమ మమ ప్రియ భరత హి సమ భాయి<br>
+                సహస బదన తుమ్హరో యశ గావై<br>
+                అస కహి శ్రీపతి కంఠ లగావై<br>
+                సనకాదిక బ్రహ్మాదిక మునీసా<br>
+                నారద సారద సహిత అహీసా<br>
+                యమ కుబేర దిగ్పాల్ జహా తే<br>
+                కవికోవిద కహి సకే కహా తే<br>
+                తుమ ఉపకార్ సుగ్రీవహి కీంహా<br>
+                రామ్ మిలాయ రాజపద దీంహా<br>
+                తుమ్హరో మంత్ర విబీషణ మానా<br>
+                లంకేశ్వర భయే సబ జగ జానా<br>
+                యుగ సహస్ర యోజన పర భానూ<br>
+                లీల్యో తాహి మధుర ఫల జానూ<br>
+                ప్రభు ముద్రికా మెలి ముఖ మాహీ<br>
+                జలధి లాఙ్ఘి గయే అచరజ నాహీ<br>
+                దుర్గమ కాజ జగత కె జేతే<br>
+                సుగమ అనుగ్రహ తుమ్హరే తేతే<br>
+                రామ్ దువారే తుమ రఖవారే<br>
+                హోత న ఆజ్ఞా బిను పయిసారే<br>
+                సబ సుఖ లహై తుమ్హారీ శరణా<br>
+                తుమ రక్షక కాహూ కో డరనా<br>
+                ఆపన తేజ సంహారో ఆపై<br>
+                తీనో లోక హాంక తే కాపై<br>
+                భూత పిశాచ నికట నహి ఆవై<br>
+                మహావీర జబ్ నామ సునావై<br>
+                నాసై రోగ హరై సబ పీరా<br>
+                జపత నిరంతర హనుమత వీరా<br>
+                సంకట తే హనుమాన్ ఛుడావై<br>
+                మన క్రమ వచన ధ్యాన జో లావై<br>
+                సబ పర రామ్ తపస్వి రాజా<br>
+                తిన్ కె కాజ సకల తుమ సాజా<br>
+                అఊర్ మనోరథ జో కోయి లావై<br>
+                సోయి అమిత జీవన ఫల పావై<br>
+                చారో యుగ ప్రతాప్ తుమ్హారా<br>
+                హై ప్రసిద్ధ జగత ఉజియారా<br>
+                సాధు సంత కె తుమ రక్షవారే<br>
+                అసుర నికందన రామ్ దులారే<br>
+                అష్ట సిధి నవ నిధి కే దాతా<br>
+                అస వర దీనహ జానకి మాతా<br>
+                రామ్ రసాయన తుమ్హరే పాసా<br>
+                సదా రహో రఘుపతి కే దాసా<br>
+                తుమ్హరే భజన రామ్ కో పావై<br>
+                జనమ జనమ కే దుఖ బిసరవై<br>
+                అంత కాల రఘుపతి పూర్ జాయ్<br>
+                జహా జన్మ హరిపక్త కహాయ్<br>
+                అఊర దేవతా చిత్త న ధరయ్<br>
+                హనుమత్ సేయి సర్వ సుఖ కరయ్<br>
+                సంకట్ కటే మిటే సబ పీరా<br>
+                జో సుమిరే హనుమత్ బలవీరా<br>
+                జై జై జై హనుమాన్ గోసాఈ<br>
+                కృపా కరహు గురుదేవ కీ నాఈ<br>
+                జో సత బార్ పాఠ కర కాయ్<br>
+                ఛూటహి బంధి మహాసుఖ హోయ్<br>
+                జో యహ పఢై హనుమాన్ చాలీసా<br>
+                హోయ సిద్ది సాకీ గౌరీసా<br>
+                తులసీదాస్ సదా హరిచేరా<br>
+                కీజై నాథ హృదయ మహడేరా<br>
+                పవనతనయ సంకట్ హరణ్<br>
+                మంగలమూర్తి రూప<br>
+                రామ్ లఖన్ సీతా సహిత<br>
+                హృదయ బసహూ సుర భూప
+            </span>
+            <span data-lang="ml" style="display: none;">
+                ശ്രീഗുരു ചരന സരോജ രജ<br>
+                നിജ മന മുഖുര് സുദാരി<br>
+                വരനൌ രഘുബര് വിമല ജസു<br>
+                ജോ ദായകു ഫല ചാരി<br>
+                ബുദ്ധിഹീന തനു ജാനികേ<br>
+                സുമിരൌ പവന കുമാര<br>
+                ബല് ബുദ്ധി വിദ്യാ ദേഹു മോഹി<br>
+                ഹരഹു കലെസ വികാര<br>
+                ജയ ഹനുമാന് ജ്ഞാന ഗുണ സാഗര<br>
+                ജയ കപീസ തിഹു ലോക ഉജാഗര<br>
+                രാം ദൂത അതുലിത ബലധാമാ<br>
+                അഞ്ജനി പുത്ര പവന സുത നാമാ<br>
+                മഹാവീര് വിക്രമ ബജരംഗി<br>
+                കുമതി നിവാര സുമതി കെ സംഗി<br>
+                കഞ്ചന ബരണ വിരാജ സുബേസാ<br>
+                കാനന കുണ്ടല കുഞ്ഞിത കേസാ<br>
+                ഹാത് വജ്ര ഔ ധ്വജാ വിരാജൈ<br>
+                കാന്ധെ മൂഁജ ജണേഉ സാജൈ<br>
+                ശങ്കര സുവന കെസരി നന്ദന<br>
+                തേജ പ്രതാപ മഹാ ജഗ് വന്ദന<br>
+                വിദ്യാവാന് ഗുണീ അതി ചതുര്<br>
+                രാം കാജ കരിബേ കോാതുര്<br>
+                പ്രഭു ചരിത്ര സുനിബേ കോ രസിയാ<br>
+                രാം ലഖന് സീതാ മന ബസിയാ<br>
+                സുക്ഷ്മ രൂപ ധരി സിയഹി ദിഖാവാ<br>
+                വികട രൂപ ധരി ലങ്കാ ജരാവാ<br>
+                ഭീമ രൂപ ധരി അസുര സംഹാരേ<br>
+                രാമചന്ദ്ര കജ സംവാരേ<br>
+                ലായ സഞ്ജീവന ലഖന് ജിയായേ<br>
+                ശ്രീ രഘുവീര ഹരഷി ഉറ് ലായേ<br>
+                രഘുപതി കീനഹി ബഹുത് ബഡായി<br>
+                തുമ മമ പ്രിയ ഭരത ഹി സമ ഭായി<br>
+                സഹസ ബദന തുമഹരോ യശ ഗാവൈ<br>
+                അസ കഹി ശ്രീപതി കന്ത ലഗാവൈ<br>
+                സനകാദിക ബ്രഹ്മാദിക മുനീസാ<br>
+                നാരദ സാരദ സഹിത അഹീസാ<br>
+                യമ കുബേര ദിഗ്പാല ജഹാ തേ<br>
+                കവി കോബിദ കഹി സകേ കഹാ തേ<br>
+                തുമ ഉപകാര സുക്രീവഹി കീഹാ<br>
+                രാം മിലായ രാജപദ ദീനഹാ<br>
+                തുമഹരോ മന്ത്ര വിഭീഷണ മാനാ<br>
+                ലങ്കേശ്വര ഭയേ സബ് ജഗ ജനാ<br>
+                യുഗ സഹസ്ര യോജന പര ഭാനു<br>
+                ലീല്യോ താഹി മധുര ഫല ജനാ<br>
+                പ്രഭു മുദ്രികാ മേലി മുഖ മാഹീ<br>
+                ജലധി ലാങ്ഘി ഗയേ അചരജ് നാഹീ<br>
+                ദുര്ഗമ കാജ ജഗത് കേ ജേതേ<br>
+                സുഗമ അനുഗ്രഹ തുമഹരേ തേതേ<br>
+                രാം ദുവാരേ തുമ രഖവാരേ<br>
+                ഹോത ന ആജ്ഞാ ബിനു പൈസാരേ<br>
+                സബ് സുഖ ലഹൈ തുമഹാരി സരണാ<br>
+                തും രക്ഷക കാഹു കോ ഡരനാ<br>
+                അപന് തേജ സംഹാരോ ആപൈ<br>
+                തീനോ ലോക ഹാംക് തെ കാപൈ<br>
+                ഭൂത പിശാച നികട നഹി ആവൈ<br>
+                മഹാവീര് ജബ് നാമ സുനാവൈ<br>
+                നാസൈ റോഗ ഹരൈ സബ് പീറാ<br>
+                ജപത നിരന്തര ഹനുമത വീറാ<br>
+                സംഘട തേ ഹനുമാന് ച്ഹുഡാവൈ<br>
+                മന ക്രമ വചന് ധ്യാന ജോ ലാവൈ<br>
+                സബ് പര രാം തപസ്വീ രാജാ<br>
+                തിന കേ കാജ സകല തും സാജാ<br>
+                ഔര്‍ മനോരഥ ജോ കോയി ലാവൈ<br>
+                സോയി അമിത ജീവന ഫല പാവൈ<br>
+                ചാരോ യുഗ പ്രതാപ തുമഹാരാ<br>
+                ഹൈ പ്രസിദ്ധ ജഗത് ഉജിയാരാ<br>
+                സാധു സന്ഥ കേ തുമ രഖവാരേ<br>
+                അസുര നികന്ദന രാം ദുലാരേ<br>
+                അഷ്ട സിദ്ധി നവ് നിധി കേ ദാതാ<br>
+                അസ വര ദീനീ ജനകീ മാതാ<br>
+                രാം രസായന്‍ തുമഹാരെ പാസാ<br>
+                സദാ രഹോ രഘുപതി കേ ദാസാ<br>
+                തുമഹരേ ഭജന രാം കോ പാവൈ<br>
+                ജനമ ജനമ കേ ദുഖ ബിസരാവൈ<br>
+                അന്ത കാല്‍ രഘുപതി പൂര ജായ്<br>
+                ജഹാ ജന്മ ഹരിഭക്ത കഹായ്<br>
+                ഔര്‍ ദേവതാ ചിത്ത ന ധരെയ്<br>
+                ഹനുമത് സെയീ സര്‍വ സുഖ് കരയ്<br>
+                സംഘട് കടെ മിടെ സബ് പീറാ<br>
+                ജോ സുമിരേ ഹനുമത് ബല്‍വീരാ<br>
+                ജയ് ജയ് ജയ് ഹനുമാന്‍ ഗോസായി<br>
+                കൃപാ കരഹു ഗുരുദേവ കീ നായീ<br>
+                ജോ സത് പാത കറി കോയി<br>
+                ഛൂടഹി ബന്ധി മഹാസുഖ് ഹോയി<br>
+                ജോ യഹ് പഠേ ഹനുമാന്‍ ചാലിസാ<br>
+                ഹോയി സിദ്ധി സാക്കി ഗൌരീസാ<br>
+                തുളസിദാസ് സദാ ഹരിചേരാ<br>
+                കീജെ നാഥ ഹൃദയ മഹ് ഡേരാ<br>
+                പവനതനയ സംഘട് ഹരണ<br>
+                മംഗല മൂര്‍ത്തി രൂപ<br>
+                രാം ലകണ്‍ സീതാ സഹിത<br>
+                ഹൃദയ ബസഹൂ സുരഭൂപ്പ
+            </span>
+            <span data-lang="kn" style="display: none;">
+                ಶ್ರೀಗುರು ಚರಣ ಸരോಜ ರಜ<br>
+                ನಿಜ ಮನ ಮುಖುರ ಸುಧಾರಿ<br>
+                ವರಣೌ ರಘುಬರ ವಿಮಲ ಜಸು<br>
+                ಜೋ ದಾಯಕು ಫಲ ಚಾರಿ<br>
+                ಬುದ್ಧಿಹೀನ ತನು ಜಾನಿಕೇ<br>
+                ಸುಮಿರೌ ಪವನ ಕುಮಾರ<br>
+                ಬಲ ಬುದ್ಧಿ ವಿದ್ಯಾ ದೇಹು ಮೋಹಿ<br>
+                ಹರಹು ಕಲೆಸ ವಿಕಾರ<br>
+                ಜೈ ಹನುಮಾನ ಜ್ಞಾನ ಗುಣ ಸಾಗರ<br>
+                ಜೈ ಕಪೀಸು ತಿಹು ಲೋಕ ಉಜಾಗರ<br>
+                ರಾಮ ದೂತ ಅತುಲಿತ ಬಲಧಾಮಾ<br>
+                ಅಂಜನಿ ಪುತ್ರ ಪವನಸುತ ನಾಮಾ<br>
+                ಮಹಾವೀರ ವಿಕ್ರಮ ಬಜ್ರಂಗಿ<br>
+                ಕುಮತಿ ನಿವಾರ ಸುಮತಿ ಕೇ ಸಂಗಿ<br>
+                ಕಂಚನ ಬರನ ಬಿರಾಜ ಸುಬೇಸಾ<br>
+                ಕಾನನ ಕುಂಡಲ ಕುಂಚಿತ ಕೇಸಾ<br>
+                ಹಾಥ ವಜ್ರ ಔ ಧ್ವಜಾ ಬಿರಾಜೈ<br>
+                ಕಾಂಧೇ ಮೂಂಜ ಜಣೇಊ ಸಾಜೈ<br>
+                ಶಂಕರ ಸುವನ ಕೇಶರಿ ನಂದನ<br>
+                ತೇಜ ಪ್ರತಾಪ ಮಹಾ ಜಗ ವಂದನ<br>
+                ವಿದ್ಯಾವಾನ್ ಗುಣೀ ಅತಿ ಚತುರ<br>
+                ರಾಮ ಕಾಜ ಕರಿಬೇ ಕೋ ಆತುರ<br>
+                ಪ್ರಭು ಚರಿತ್ರ ಸುನಿಬೇ ಕೋ ರಸಿಯಾ<br>
+                ರಾಮ ಲಖನ ಸೀತಾ ಮನ ಬಸಿಯಾ<br>
+                ಸೂಕ್ಷ್ಮ ರೂಪ ಧರಿ ಸಿಯಹಿ ದಿಖಾವಾ<br>
+                ವಿಕಟ ರೂಪ ಧರಿ ಲಂಕಾ ಜರಾವಾ<br>
+                ಭೀಮ ರೂಪ ಧರಿ ಅಸುರ ಸಂಹಾರೇ<br>
+                ರಾಮಚಂದ್ರ ಕಾಜ ಸಂವಾರೇ<br>
+                ಲಾಯ ಸಂಜೀವನ ಲಖನ ಜೀಯಾಯೇ<br>
+                ಶ್ರೀ ರಘುವೀರ ಹರಷಿ ಉರ ಲಾಯೇ<br>
+                ರಘುಪತಿ ಕೀನಹಿ ಬಹುತ್ ಬಡಾಯಿ<br>
+                ತುಮ ಮಮ ಪ್ರಿಯ ಭರತ ಹಿ ಸಮ ಭಾಯಿ<br>
+                ಸಹಸ ಬದನ ತುಮಹರೋ ಯಶ್ ಗಾವೈ<br>
+                ಅಸ ಕಹಿ ಶ್ರೀಪತಿ ಕಂಠ ಲಗಾವೈ<br>
+                ಸಂಕಾದಿಕ ಬ್ರಹ್ಮಾದಿಕ ಮುನೀಸಾ<br>
+                ನಾರದ ಸಾರದ ಸಹಿತ ಅಹೀಸಾ<br>
+                ಯಮ ಕುಬೇರ ದಿಗ್ಪಾಲ ಜಹಾ ತೇ<br>
+                ಕವಿಕೋವಿದ ಕಹಿ ಸಕೆ ಕಹಾ ತೇ<br>
+                ತುಮ ಉಪಕಾರ ಸುಗ್ರೀವಹಿ ಕೀನಹಾ<br>
+                ರಾಮ ಮಿಲಾಯ ರಾಜಪದ ದಿನಹಾ<br>
+                ತುಮಹರೋ ಮಂತ್ರ ವಿಭೀಷಣ ಮಾನಾ<br>
+                ಲಂಕೇಶ್ವರ ಭಯೇ ಸಬ ಜಗ ಜಾನಾ<br>
+                ಯುಗ ಸಹಸ್ರ ಯೋಜನ ಪರ ಭಾನು<br>
+                ಲೀಲ್ಯೋ ತಾಹಿ ಮಧುರ ಫಲ ಜಾನು<br>
+                ಪ್ರಭು ಮುದ್ರಿಕಾ ಮೇಳಿ ಮುಖ ಮಾಹೀ<br>
+                ಜಲಧಿ ಲಾಂಘಿ ಗಯೇ ಅಚರಜ ನಾಹೀ<br>
+                ದುರ್ಗಮ ಕಾಜ ಜಗತ ಕೆ ಜೆತೇ<br>
+                ಸುಗಮ ಅನುಗ್ರಹ ತುಮಹರೆ ತೇತೇ<br>
+                ರಾಮ ದುವಾರೇ ತುಮ ರಖವಾರೆ<br>
+                ಹೋತ ನ ಆಜ್ಞಾ ಬಿನು ಪೈಸಾರೇ<br>
+                ಸಬ ಸುಖ ಲಹೈ ತುಮಹಾರಿ ಶರಣಾ<br>
+                ತುಮ ರಕ್ಷಕ ಕಾಹು ಕೋ ಡರನಾ<br>
+                ಆಪನ ತೇಜ ಸಂಹಾರೋ ಆಪೈ<br>
+                ತೀನೋ ಲೋಕ ಹಾಂಕ್ ತೇ ಕಾಪೈ<br>
+                ಭೂತ ಪಿಶಾಚ ನಿಕಟ ನಹಿ ಆವೈ<br>
+                ಮಹಾವೀರ ಜಬ ನಾಮ ಸುನಾವೈ<br>
+                ನಾಸೈ ರೋಗ ಹರೈ ಸಬ ಪೀರಾ<br>
+                ಜಪತ ನಿರಂತರ ಹನುಮತ ವೀರಾ<br>
+                ಸಂಕಟ ತೇ ಹನುಮಾನ छुಡಾವೈ<br>
+                ಮನ ಕ್ರಮ ವಚನ ಧ್ಯಾನ ಜೋ ಲಾವೈ<br>
+                ಸಬ ಪರ ರಾಮ ತಪಸ್ವೀ ರಾಜಾ<br>
+                ತಿನ್ ಕೇ ಕಾಜ ಸಕಲ ತುಮ ಸಾಜಾ<br>
+                ಔರ್ ಮನೋರಥ ಜೋ ಕೋಯಿ ಲಾವೈ<br>
+                ಸೊಯಿ ಅಮಿತ ಜೀವನ ಫಲ ಪಾವೈ<br>
+                ಚಾರೋ ಯುಗ ಪ್ರತಾಪ ತುಮಹಾರಾ<br>
+                ಹೈ ಪ್ರಸಿದ್ಧ ಜಗತ ಉಜಿಯಾರಾ<br>
+                ಸಾಧು ಸಂತ ಕೇ ತುಮ ರಖವಾರೆ<br>
+                ಅಸುರ ನಿಕಂದನ ರಾಮ ದೂಲಾರೆ<br>
+                ಅಷ್ಟ ಸಿದ್ಧಿ ನವ ನಿಧಿ ಕೇ ದಾತಾ<br>
+                ಅಸ ವರ ದಿನಹ ಜಾನಕೀ ಮಾತಾ<br>
+                ರಾಮ ರಸಾಯಣ ತುಮಹರೆ ಪಾಸಾ<br>
+                ಸದಾ ರಹೋ ರಘುಪತಿ ಕೇ ದಾಸಾ<br>
+                ತುಮಹರೆ ಭಜನ ರಾಮ ಕೋ ಪಾವೈ<br>
+                ಜನಮ ಜನಮ ಕೇ ದುಖ ಬಿಸರಾವೈ<br>
+                ಅಂತ ಕಾಲ ರಘುಪತಿ ಪುರ ಜಾಯ್<br>
+                ಜಹಾ ಜನ್ಮ ಹರಿಭಕ್ತ ಕಹಾಯ್<br>
+                ಔರ್ ದೇವತಾ ಚಿತ್ತ ನ ಧರೈ<br>
+                ಹನುಮತ ಸೆಯಿ ಸರ್ವ ಸುಖ್ ಕರೈ<br>
+                ಸಂಕಟ ಕಟೈ ಮಿಟೈ ಸಬ ಪೀರಾ<br>
+                ಜೋ ಸುಮಿರೈ ಹನುಮತ ಬಲವೀರಾ<br>
+                ಜಯ ಜಯ ಜಯ ಹನುಮಾನ್ ಗೋಸಾಂಯಿ<br>
+                ಕೃಪಾ ಕರಹು ಗುರುದೇವ ಕೀ ನಾಯೀ<br>
+                ಜೋ ಸತ ಪಾಠ್ ಕರೋ ಕೋಯಿ<br>
+                ಛೂಟಹಿ ಬಂಧಿ ಮಹಾಸುಖ್ ಹೋಯಿ<br>
+                ಜೋ ಯಹ ಪಢೈ ಹನುಮಾನ್ ಚಾಲಿಸಾ<br>
+                ಹೋಯ ಸಿದ್ಧಿ ಸಾಕೀ ಗೌರೀಸಾ<br>
+                ತುಲಸಿದಾಸ ಸದಾ ಹರಿಚೆರಾ<br>
+                ಕೀಜೈ ನಾಥ ಹೃದಯ ಮಹ್ ಡೇರಾ<br>
+                ಪವನತನುಯ ಸಂಕಟ ಹರಣ<br>
+                ಮಂಗಲಮೂರ್ತಿ ರೂಪ<br>
+                ರಾಮ ಲಖನ ಸೀತಾ ಸಹಿತ<br>
+                ಹೃದಯ ಬಸಹೂ ಸುರ ಭೂಪ
+            </span>
+            <span data-lang="ne" style="display: none;">
+                श्रीगुरु चरण सरोज रज<br>
+                निज मन मुकुर सुधारि<br>
+                बरनऊं रघुबर बिमल जसु<br>
+                जो दायकु फल चारि<br>
+                बुद्धिहीन तनु जानिके<br>
+                सुमिरौ पवन कुमार<br>
+                बल बुद्धि विद्या देहु मोहिं<br>
+                हरहु कलेस विकार<br>
+                जय हनुमान ज्ञान गुण सागर<br>
+                जय कपीस तिहुँ लोक उजागर<br>
+                राम दूत अतुलित बलधामा<br>
+                अंजनि-पुत्र पवनसुत नामा<br>
+                महाबीर बिक्रम बजरंगी<br>
+                कुमति निवार सुमति के संगी<br>
+                कंचन बरन बिराज सुबेसा<br>
+                कानन कुंडल कुंचित केसा<br>
+                हाथ वज्र औ ध्वजा बिराजै<br>
+                कांधे मूँज जनेऊ साजै<br>
+                शंकर सुवन केसरी नंदन<br>
+                तेज प्रताप महा जग बन्दन<br>
+                विद्या वान गुणी अति चातुर<br>
+                राम काज करिबे को आतुर<br>
+                प्रभु चरित्र सुनिबे को रसिया<br>
+                राम लखन सीता मन बसिया<br>
+                सूक्ष्म रूप धरि सियहिं दिखावा<br>
+                बिकट रूप धरि लंक जरावा<br>
+                भीम रूप धरि असुर सँहारे<br>
+                रामचंद्र के काज सँवारे<br>
+                लाय संजीवन लखन जियाये<br>
+                श्री रघुबीर हरषि उर लाये<br>
+                रघुपति कीन्ही बहुत बड़ाई<br>
+                तुम मम प्रिय भरतहि सम भाई<br>
+                सहस बदन तुम्हरो यश गावैं<br>
+                अस कहि श्रीपति कंठ लगावैं<br>
+                सनकादिक ब्रह्मादि मुनीसा<br>
+                नारद सारद सहित अहीसा<br>
+                जम कुबेर दिगपाल जहां ते<br>
+                कबि कोबिद कहि सके कहां ते<br>
+                तुम उपकार सुग्रीवहिं कीन्हा<br>
+                राम मिलाय राजपद दीन्हा<br>
+                तुम्हरो मंत्र बिभीषण माना<br>
+                लंकेस्वर भए सब जग जाना<br>
+                युग सहस्र योजन पर भानू<br>
+                लील्यो ताहि मधुर फल जानू<br>
+                प्रभु मुद्रिका मेलि मुख माही<br>
+                जलधि लाँघि गये अचरज नाहीं<br>
+                दुर्गम काज जगत के जेते<br>
+                सुगम अनुग्रह तुम्हरे तेते<br>
+                राम दुआरे तुम रखवारे<br>
+                होत न आज्ञा बिनु पैसारे<br>
+                सब सुख लहै तुम्हारी सरना<br>
+                तुम रक्षक काहू को डरना<br>
+                आपन तेज सम्हारो आपै<br>
+                तीनों लोक हाँक तें काँपै<br>
+                भूत पिशाच निकट नहिं आवै<br>
+                महाबीर जब नाम सुनावै<br>
+                नासै रोग हरै सब पीरा<br>
+                जपत निरंतर हनुमत बीरा<br>
+                संकट तें हनुमान छुड़ावै<br>
+                मन क्रम वचन ध्यान जो लावै<br>
+                सब पर राम तपस्वी राजा<br>
+                तिन के काज सकल तुम साजा<br>
+                और मनोरथ जो कोई लावै<br>
+                सोइ अमित जीवन फल पावै<br>
+                चारों जुग परताप तुम्हारा<br>
+                है परसिद्ध जगत उजियारा<br>
+                साधु संत के तुम रखवारे<br>
+                असुर निकंदन राम दुलारे<br>
+                अष्ट सिद्धि नव निधि के दाता<br>
+                अस वर दीन्ह जानकी माता<br>
+                राम रसायन तुम्हरे पासा<br>
+                सदा रहो रघुपति के दासा<br>
+                तुम्हरे भजन राम को पावै<br>
+                जनम जनम के दुख बिसरावै<br>
+                अन्त काल रघुबर पुर जाई<br>
+                जहाँ जन्म हरि-भक्त कहाई<br>
+                और देवता चित्त न धरई<br>
+                हनुमत सेइ सर्ब सुख करई<br>
+                संकट कटै मिटै सब पीरा<br>
+                जो सुमिरै हनुमत बलबीरा<br>
+                जय जय जय हनुमान गोसाईं<br>
+                कृपा करहु गुरु देव की नाईं<br>
+                जो सत बार पाठ कर कोई<br>
+                छूटहि बन्दि महा सुख होई<br>
+                जो यह पढ़ै हनुमान चालीसा<br>
+                होय सिद्धि साखी गौरीसा<br>
+                तुलसीदास सदा हरि चेरा<br>
+                कीजै नाथ हृदय मंह डेरा<br>
+                पवनतनय संकट हरन<br>
+                मंगलमूर्ति रूप<br>
+                राम लखन सीता सहित<br>
+                हृदय बसहु सुर भूप
+            </span>
+        </p>
+        <!-- This website is created by Preetham Devulapally for Hindu society. All rights reserved © -->
+    </div>
+</div>
+    </p>
+</div>
+            <p class="translation-note">If the translation is not accurate, we apologise for the inconvenience.</p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="contact-info">
+            <p>&copy; 2024 UoW Hindu Society. All rights reserved.</p>
+        </div>
+        <div class="social-media">
+            <a href="https://www.instagram.com/uow_hindusoc/"><img src="Images/instagram.png" alt="@uow_hindusoc instagram" class="insta"></a>
+            <a href="https://www.tiktok.com/@uow_hindusoc?lang=en"><img src="Images/tik-tok.png" alt="@uow_hindusoc tiktok" class="tiktok"></a>
+            <p>@uow_hindusoc</p>
+        </div>
+    </footer>
+
+    <script>
+        function updateLanguage() {
+            const language = document.getElementById('language-select').value;
+            const mantraTexts = document.querySelectorAll('.mantra-text');
+
+            mantraTexts.forEach(mantraText => {
+                mantraText.querySelectorAll('span').forEach(span => {
+                    if (span.dataset.lang === language) {
+                        span.style.display = 'inline';
+                    } else {
+                        span.style.display = 'none';
+                    }
+                });
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            updateLanguage(); 
+        });
+    </script>
+
+    <script>
+        const burgerMenu = document.getElementById('burger-menu');
+        const navLinks = document.getElementById('nav-menu');
+        const accessibilityMenu = document.getElementById('accessibility-menu');
+
+        burgerMenu.addEventListener('click', () => {
+            navLinks.classList.toggle('show');
+            burgerMenu.classList.toggle('active');
+        });
+
+        function toggleAccessibilityMenu() {
+            accessibilityMenu.classList.toggle('show');
+        }
+
+        function increaseFontSize() {
+            document.body.style.fontSize = 'larger';
+        }
+
+        function decreaseFontSize() {
+            document.body.style.fontSize = 'smaller';
+        }
+
+        function toggleColorBlindMode() {
+            document.body.classList.toggle('color-blind');
+        }
+
+        function toggleHighContrast() {
+            document.body.classList.toggle('high-contrast');
+        }
+
+        function resetView() {
+            document.body.style.fontSize = '';
+            document.body.classList.remove('color-blind');
+            document.body.classList.remove('high-contrast');
+        }
+    </script>
+
+    <script> 
+    
+    function updateLanguage() {
+    const language = document.getElementById('language-select').value;
+    const mantraTexts = document.querySelectorAll('.mantra-text');
+
+    mantraTexts.forEach(mantraText => {
+        mantraText.querySelectorAll('span').forEach(span => {
+            if (span.dataset.lang === language) {
+                span.style.display = 'inline';
+            } else {
+                span.style.display = 'none';
+            }
+        });
+    });
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    updateLanguage(); 
+});
+
+function showFullMantra(mantraId) {
+    const popup = document.getElementById('mantra-popup');
+    const fullMantraText = document.querySelector(`[data-mantra="${mantraId}-full"]`);
+    const popupMantraText = popup.querySelector('.mantra-text');
+
+    popupMantraText.innerHTML = fullMantraText.innerHTML;
+    popup.style.display = 'flex';
+}
+
+function closePopup() {
+    document.getElementById('mantra-popup').style.display = 'none';
+}
+ </script>
+</body>
+</html>

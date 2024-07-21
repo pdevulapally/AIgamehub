@@ -1,0 +1,350 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+header {
+    background-color: #F5F5E8;
+    color: #333;
+    padding: 20px 0;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+header .logo {
+    width: 150px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+header h1 {
+    font-size: 2.5em;
+    color: #fcbc25;
+    margin-bottom: 10px;
+    position: relative;
+    top: -36px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    position: relative;
+}
+
+.NHSF {
+    width: 160px;
+    height: auto;
+    position: relative;
+    right: -558px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fcbc25;
+    text-decoration: none;
+    font-weight: bold;
+    position: relative;
+    right: -365px;
+}
+
+nav ul li a:hover {
+    color: black;
+}
+
+.accessibility-button {
+    background-color: #fdcc17;
+    padding: 8px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    position: absolute;
+    top: 20px;
+    left: 20px; /* Moved to the left */
+}
+
+.accessibility-button .material-symbols-outlined {
+    font-size: 24px;
+    color: black;
+    margin-right: 10px;
+}
+
+.accessibility-menu {
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: 20px; /* Aligned with the accessibility button */
+    background-color: white;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    z-index: 1000;
+}
+
+.accessibility-menu.show {
+    display: block;
+}
+
+.accessibility-menu button {
+    display: block;
+    width: 100%;
+    margin: 5px 0;
+    padding: 10px;
+    background-color: #fdcc17;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    color: white;
+}
+
+.burger-menu {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    z-index: 1000;
+    position: absolute;
+    top: -270px;
+    right: 20px; /* Aligned with the right side */
+}
+
+.burger-menu div {
+    width: 27px;
+    height: 4px;
+    background-color: #050505;
+    margin: 3px 0;
+    transition: 0.3s;
+}
+
+.burger-menu.active div:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.burger-menu.active div:nth-child(2) {
+    opacity: 0;
+}
+
+.burger-menu.active div:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: -235px;
+        right: 26px;
+        background-color: #F5F5E8;
+        width: 48%;
+        border-radius: 5px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    nav ul.show {
+        display: flex;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    nav ul li a {
+        color: #fcbc25;
+        text-decoration: none;
+        font-weight: bold;
+        padding: 10px;
+        text-align: center;
+        position: relative;
+        top: 0px;
+        right: 0px;
+
+    }
+
+    .burger-menu {
+        display: flex;
+    }
+
+    .NHSF {
+        width: 184px;
+        height: auto;
+        position: relative;
+        right: -144px;
+    }
+}
+
+main {
+    padding: 20px 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.about, .events, .contact {
+    margin-bottom: 40px;
+}
+
+h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #fcbc25;
+    text-align: center;
+}
+
+p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: black;
+    margin: 0 0 20px;
+    text-align: justify;
+}
+
+.nhsf-logo {
+    display: block;
+    margin: 20px auto;
+    width: 175px;
+    height: auto;
+}
+
+.event {
+    background: #f9f9f9;
+    margin: 20px 0;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 600px; /* Restricting max width for desktop and laptop users */
+    display: block;
+    margin: 0 auto;
+}
+
+.event h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #333;
+    text-align: center; /* Centered text alignment */
+}
+
+.event-img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.timer {
+    font-size: 20px;
+    font-weight: bold;
+    color: #fcbc25;
+    text-align: center; /* Centered text alignment */
+}
+
+.social-media {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.social-media-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+}
+
+footer {
+    background: #fdcc17;
+    color: black;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 20px;
+    box-shadow: 0 -4px 8px rgba(0,0,0,0.1);
+}
+
+footer .contact-info {
+    text-align: center;
+}
+
+footer .social-media {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+    gap: 10px;
+}
+
+footer .social-media a {
+    text-decoration: none;
+}
+
+footer .social-media p {
+    margin: 0;
+    font-size: 16px;
+}
+
+.insta, .tiktok {
+    width: 30px;
+    height: auto;
+}
+
+body.color-blind {
+    filter: grayscale(100%);
+}
+
+body.high-contrast {
+    filter: contrast(2);
+}
+
+.question {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.insta2{
+    width: 30px;
+    height: auto;
+    position: relative;
+    left: -26px;
+}
+
+.nhsf-insta{
+    position: relative;
+    left: -23px;
+    bottom: -6px;
+}
+
+.copyright {
+    text-align: center;
+    width: 100%;
+}
